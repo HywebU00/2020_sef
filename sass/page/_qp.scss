@@ -1,5 +1,13 @@
 .qp{
-	margin: 1em auto;
+	margin: 1em 0 2.5em;
+	padding: 1em 0;
 	@include box-sizing;
-	padding:1em;
+	.box{
+		section{
+			background: #fff;
+			padding: 1.5em 2em;
+			box-shadow: 0 0 1em 0em rgba(0,0,0,0.15);
+			border-radius: 4px;	
+		}
+	}
 }

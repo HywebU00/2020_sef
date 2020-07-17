@@ -115,8 +115,14 @@ img.img-responsive {
 }
 // 表單必填
 .necessary {
-    color: red;
+    color: #bf0000;
     margin: 0px .2em;
+    background: #fff;
+    padding: .25em .5em;
+    font-size: .813em;
+    font-weight: bold;
+    border-radius: 4px;
+    box-shadow: inset 0px 0px 0px 1px #bf0000;
 }
 
 .tooltip {
