@@ -100,6 +100,16 @@ $btn-radius:.2em;
 .btn-primary {
     @extend .btn-orange;
 }
+
+// 自訂
+.btn-more{
+    @extend %btn;
+    @include btn_setting($primaryColor, #FFF);
+    &:hover, &:focus {
+        background: darken($primaryColor, 12); 
+    }
+}
+
 // 按鈕大小
 .btn-xl {
     font-size: $font-size * 1.5; //24px

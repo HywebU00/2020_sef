@@ -8,6 +8,7 @@ $(function() {
         infinite: true,
         speed: 500,
         autoplay: true,
+        autoplaySpeed: 5000,
         fade: true,
         lazyLoaded: true,
         lazyLoad: 'ondemand',
@@ -122,5 +123,196 @@ $(function() {
         focusOnSelect: true,
         infinite: true
     });
+
+    // 三欄單格run
+    // - 主題專區
+    $('.multiple-items').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1
+    });
+    $('.publications-items').slick({
+        mobileFirst: true,
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        autoplay: false,
+        arrow: true,
+        lazyLoaded: true,
+        lazyLoad: 'ondemand',
+        ease: 'ease',
+        responsive: [{
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                arrows: true
+            }
+        },{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                arrows: true
+            }
+        },{
+            breakpoint: 575,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                arrows: true
+            }
+        }]
+    });
+
+    // 單欄單格run
+    // - 影像專區
+    $('.videoSlider').slick({
+        mobileFirst: true,
+        dots: false,
+        arrow: true,
+        infinite: true,
+        speed: 500,
+        autoplay: false,
+        fade: true,
+        lazyLoaded: true,
+        lazyLoad: 'ondemand',
+        ease: 'ease'
+    });
+
+    // 月刊輪播
+    $('.bookSlider').slick({
+        mobileFirst: true,
+        dots: true,
+        arrow: true,
+        infinite: true,
+        speed: 500,
+        autoplay: false,
+        autoplaySpeed: 5000,
+        fade: true,
+        lazyLoaded: true,
+        lazyLoad: 'ondemand',
+        ease: 'ease'
+    });
+
+    // 偵測高度吐出來
+    $(document).ready(function(){
+        _tabItem_HH = $('.tabItem').height();              //標屜高
+        _tabConten_HH = $('.accordion').height();          //內容高
+        _total_HH = _tabItem_HH + _tabConten_HH + 120;           //總高＝標屜高＋內容高
+        $(".tabItemH").find('span').text(_tabItem_HH);     //前台動態顯示
+        $(".contentH").find('span').text(_tabConten_HH);   //前台動態顯示
+        $('.totalH').find('span').text(_total_HH);         //前台動態顯示
+        $('.tabLink').css('height', _total_HH);            //把總高吐出來
+
+        $('.tabs2 .accordion a.title').click(function(){
+            _tabItem_HH = $('.tabItem').height();
+            _tabConten_HH = $('.accordion').height();
+            _total_HH = _tabItem_HH + _tabConten_HH + 120;
+
+            $(".tabItemH").find('span').text(_tabItem_HH);
+            $(".contentH").find('span').text(_tabConten_HH);
+            $('.totalH').find('span').text(_total_HH);
+
+            $('.tabLink').css('height', _total_HH);
+        })
+    });
+
+    // parallax scrolling 視差滾動
+
+
+    // search switch
+    // $('.switch').click(function(){
+    //     $(this).next('.form_grp').stop(true,false).slideToggle(300);
+    // });
+
+    // 搜尋
+    $('.search').on({
+        mouseenter: function() {
+            $(this).find('.form_grp').stop(true, false).fadeIn();
+        },
+        mouseleave: function() {
+            $(this).find('.form_grp').stop(true, false).fadeOut();
+        }
+    });
+    $('.search .switch').focus(function(){
+        $(this).next('.form_grp').stop(true, false).fadeIn();
+    });
+    $('.search .switch').next('.form_grp').focusout(function(){
+        $(this).stop(true, false).fadeOut();
+    });
+
+    // 條件查詢
+    $('.Conditional_query > .switch').click(function(){
+        $(this).next('.form_grid').stop(true, false).slideToggle(function(){
+            if ($(this).is(':visible')) {
+                $(this).siblings('.btn').attr('value', '收合條件查詢');
+            } else {
+                $(this).siblings('.btn').attr('value', '開啟條件查詢');
+            }
+        });
+    });
+
+    // 開合選單
+    // $('.elastic-box .btn').click(function(e){
+    //     // alert('有');
+    //     $(this).next('.content').stop(true,true).slideToggle(function(){
+    //         if ($(this).is(':visible')) {
+    //             $('.btn').attr('value', '收合選單');
+    //         } else {
+    //             $('.btn').attr('value', '展開選單');
+    //         }
+    //     });
+    // });
+
+    // 開合選單 - 一次全展
+    $('.elastic-box').each(function(){
+        var _elasticBox = $(this).find('input.btn');
+        _elasticBox.each(function(){
+            function gogo(e){
+                $(this).next('.content').stop(true,true).slideToggle(function(){
+                    if ($(this).is(':visible')) {
+                        $(this).siblings('.btn').attr('value', '收合內容');
+                    } else {
+                        $(this).siblings('.btn').attr('value', '展開內容');
+                    }
+                });
+                e.preventDefault();
+            }
+            $(this).click(gogo);
+            $(this).keyup(gogo);
+        });
+    });
+
+    // 開合選單 - 露出一點，一次全展
+    // var _content = $(this).parent('.btn_grp').siblings('.content');
+
+    $('.Half-cover input.btn').click(function(){
+        // alert('有');
+        if($(this).parents('.Half-cover').find('.content').hasClass('open')){
+            $(this).parents('.Half-cover').find('.content').removeClass('open');
+            $(this).attr('value', '展開更多內容');
+        }else{
+            $(this).parents('.Half-cover').find('.content').addClass('open');
+            $(this).attr('value', '收合更多內容');
+        }
+        // $(this).parent('.btn_grp').siblings('.content').addClass('open');
+    });
     
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+

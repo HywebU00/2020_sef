@@ -15,14 +15,148 @@ body {
         padding: 0;
     }
 }
+
 // 最外圍預設為100%
+body{ position: relative; }
 .wrapper {
     width: 100%;
     margin: 0px auto;
+    background: url(../images/bg-mp.jpg) 50% top no-repeat,#eee;
+    background-size: cover;
+    background-attachment: fixed;
     @include screen('mobile') {
         background: #FFF;
         overflow: hidden;
         overflow-y: auto;
+    }
+
+    &.NP2, &.NP3, &.NP4, &.NP5, &.NP6, &.NP6, &.NP7, &.NP8, &.NP9{
+        background: none;
+        .innerpage{
+            position: relative;
+            .bg-box-L{
+                // position: absolute;
+                position: fixed;
+                // background: url(../images/bg-side_NP3.png) 50% 50% no-repeat;
+                width: 763px;
+                height: 475px;
+                z-index: -1;
+                top:10%;
+                left: -20%;
+            }
+            .bg-box-R{
+                // position: absolute;
+                position: fixed;
+                // background: url(../images/bg-side_NP3.png) 50% 50% no-repeat;
+                width: 763px;
+                height: 475px;
+                z-index: -1;
+                top:30%;
+                right: -20%;
+            }
+        }
+        .basic-bg{
+            position: absolute;
+            z-index: -2;
+            background: url(../images/bg-mp.jpg) 50% top no-repeat,#eee;
+            background-size: cover;
+            background-attachment: fixed;
+            width: 100%;
+            height: 100%;
+            top:0;
+        }
+    }
+    &.NP2{
+        .innerpage{
+            .bg-box-L{
+                background: url(../images/bg-side_NP2.png) 50% 50% no-repeat;
+            }
+            .bg-box-R{
+                background: url(../images/bg-side_NP2.png) 50% 50% no-repeat;
+            }
+        }
+    }
+    &.NP3{
+        .innerpage{
+            .bg-box-L{
+                // position: fixed;
+                background: url(../images/bg-side_NP3.png) 50% 50% no-repeat;
+                // width: 763px;
+                // height: 475px;
+                // z-index: -1;
+                // top:10%;
+                // left: -20%;
+            }
+            .bg-box-R{
+                // position: fixed;
+                background: url(../images/bg-side_NP3.png) 50% 50% no-repeat;
+                // width: 763px;
+                // height: 475px;
+                // z-index: -1;
+                // top:30%;
+                // right: -20%;
+            }
+        }
+    }
+    &.NP4{
+        .innerpage{
+            .bg-box-L{
+                background: url(../images/bg-side_NP4.png) 50% 50% no-repeat;
+            }
+            .bg-box-R{
+                background: url(../images/bg-side_NP4.png) 50% 50% no-repeat;
+            }
+        }
+    }
+    &.NP5{
+        .innerpage{
+            .bg-box-L{
+                background: url(../images/bg-side_NP5.png) 50% 50% no-repeat;
+            }
+            .bg-box-R{
+                background: url(../images/bg-side_NP5.png) 50% 50% no-repeat;
+            }
+        }
+    }
+    &.NP6{
+        .innerpage{
+            .bg-box-L{
+                background: url(../images/bg-side_NP6.png) 50% 50% no-repeat;
+            }
+            .bg-box-R{
+                background: url(../images/bg-side_NP6.png) 50% 50% no-repeat;
+            }
+        }
+    }
+    &.NP7{
+        .innerpage{
+            .bg-box-L{
+                background: url(../images/bg-side_NP7.png) 50% 50% no-repeat;
+            }
+            .bg-box-R{
+                background: url(../images/bg-side_NP7.png) 50% 50% no-repeat;
+            }
+        }
+    }
+    &.NP8{
+        .innerpage{
+            .bg-box-L{
+                background: url(../images/bg-side_NP8.png) 50% 50% no-repeat;
+            }
+            .bg-box-R{
+                background: url(../images/bg-side_NP8.png) 50% 50% no-repeat;
+            }
+        }
+    }
+    &.NP9{
+        .innerpage{
+            .bg-box-L{
+                background: url(../images/bg-side_NP9.png) 50% 50% no-repeat;
+            }
+            .bg-box-R{
+                background: url(../images/bg-side_NP9.png) 50% 50% no-repeat;
+            }
+        }
     }
 }
 // 整體共用container樣式，請注意首頁切版頁面的整齊
@@ -47,10 +181,106 @@ body {
 // 為了與首頁區隔，請在內頁加上innerpage ClassName
 .innerpage {
     padding-top: 2em;
-    @include screen('mobile') {
+    @include screen('tablet') {
         padding-top: 5em;
     }
     >.container {
         @include gutter(); //gutter 代表左右要留白
     }
 }
+
+
+// Flex
+.Flex{
+    display: flex;
+    flex-flow: row nowrap;
+
+    // h2.title,
+    .breadcrumb,
+    .function_panel{
+        flex: 1 1 50%;
+        align-self: center;
+    }
+
+    @include screen('tablet') {
+        flex-flow: row wrap;
+        .breadcrumb,
+        .function_panel{
+            flex: 1 1 100%;
+        }
+    }
+}
+
+// 條件查詢
+.Conditional_query{
+    .switch{
+        margin: auto;
+    }
+    form{
+        margin: .5em 0;
+        padding: 1.5em 2em;
+        background: #fff;
+        border-radius: 6px;
+        box-shadow: 0px 0px 12px 0px rgba(210, 210, 210,0.75);
+
+        &.form_grid{
+            border-top: 0;
+
+            display: none;
+        }
+    }
+}
+
+// Q&A
+.QA{
+    >ul{
+        @include li-reset;
+        li{
+            margin-bottom: .45em;
+            a.question{
+                display: block;
+                background: $lightColor;
+                color: #fff;
+                padding: .75em 1.25em .75em 2.75em;
+                border-radius: 4px;
+                time{
+                    display: inline-block;
+                    padding: 0 .75em;
+                }
+                &:before{
+                    content:'Q';
+                    margin-left: -1.5em;
+                }
+
+                &.active{
+                    background: $primaryColor;
+                    border-bottom-left-radius: 0;
+                    border-bottom-right-radius: 0;
+                }
+            }
+
+            .accordion-content{
+                background: #fff;
+                padding: 1em 2em;
+                box-shadow: 0px 0px 120px 0px rgba(0,0,0,0.25);
+                border-bottom-left-radius: 4px;
+                border-bottom-right-radius: 4px;
+
+                display: none;
+
+                ul, ol{
+                    padding-top: .5em;
+                    padding-bottom: .5em;
+                }
+            }
+
+            &:first-child{
+                >.accordion-content{ display: block; }
+            }
+        }
+    }
+}
+
+
+
+

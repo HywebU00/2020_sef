@@ -97,6 +97,27 @@ img {
         bottom: 0;
     }
 }
+// 
+.img-container2 {
+    width: auto;
+    max-width: 100%;
+    max-height: 250px;
+    background: #efefef;
+
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
 %ie_setting {
     position: relative;
     background-position: center center;

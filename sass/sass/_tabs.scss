@@ -2,6 +2,7 @@
     max-width: 100%;
     margin: 1em auto;
     overflow: hidden;
+    background: #fff;
     @extend %clearfix;
     @include screen('mobile') {
         width: auto;
@@ -58,6 +59,10 @@
 // 顯示content
 .active+.tabContent {
     display: block;
+
+    @include screen('mobile') {
+        background: #f3f3f3;
+    }
 }
 .tabContent {
     position: absolute;
@@ -74,7 +79,8 @@
         @include li-reset;
     }
     li {
-        margin: 0 0 1.3em 0;
+        // margin: 0 0 .9em 0;
+        margin: .65em 0;
         padding: 0;
         line-height: 1.6;
         border-bottom: 1px #CCC dashed;
@@ -89,6 +95,24 @@
             margin: 0 0 0 1em;
             font-size: .813em;
             color: #666;
+        }
+
+        li{
+            &:last-child{ border-bottom: 0; }
+
+            li{
+                border-bottom: 0;
+            }
+        }
+    }
+
+    ol{
+        ol{
+            list-style-type:cjk-ideographic;
+            ol{
+                list-style-type:lower-latin;
+                margin: 1.25em 0;
+            }
         }
     }
 }

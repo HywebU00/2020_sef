@@ -1,10 +1,18 @@
 @charset "utf-8";
-// 文章標題
-h1.title, h2.title {
-    line-height: 1.25em;
-    margin: .4em 0;
-}
+
+.small_size {  font-size: 90%; }
+.large_size { font-size: 112.5%; }
+
 .cp {
+    padding: 1.5em 2em;
+    background: #fff;
+    box-shadow: 0px 0px 6px 0px rgba(0,0,0,.15);
+    border-radius: 4px;
+    margin-bottom: 2em;
+
+    section{
+        padding: 1em 0;
+    }
     .pic {
         float: left;
         margin: 0px 1em 1em 0;
@@ -34,12 +42,12 @@ h1.title, h2.title {
             margin-bottom: .5em;
         }
     }
-    &.small_size {
-        font-size: .938em;
-    }
-    &.large_size {
-        font-size: 1.125em;
-    }
+    // &.small_size {
+    //     font-size: .938em;
+    // }
+    // &.large_size {
+    //     font-size: 1.125em;
+    // }
     table {
         background: #FFF;
     }
@@ -395,10 +403,10 @@ div.tag {
     font-size: 0.875em;
     line-height: 1.5em;
     list-style: none;
-    margin: 0 0 .7em 0;
+    margin: 1.5em 0;
     border-left: solid 5px $primaryColor;
     padding: 0.8em 1.5em 0.8em;
-    background: #F2F2F2;
+    background: #fff;
     @extend %clearfix;
      @include box-sizing;
     @include screen('mobile') {
@@ -406,7 +414,7 @@ div.tag {
     }
     li {
         width: 32%;
-        margin-bottom: .5em;
+        margin: .5em 0;
         display: inline-block;
         vertical-align: top;
         @include screen('tablet') {
@@ -420,3 +428,102 @@ div.tag {
         }
     }
 }
+
+// RWD yuotube
+.youtube-RWD{
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow:hidden;
+    max-width: 100%;
+    iframe, object, embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+// flickr
+.flickr{
+    iframe{
+        width: 100%;
+        height: 480px;
+    }
+}
+
+// google-map
+.google-map{
+    iframe{
+        width: 100%;
+    }
+}
+
+// 機關人員
+.staff{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+
+    flex-flow: row nowrap;
+    .Foto{
+        flex: 0 0 220px;
+    }
+    .Experience{
+        flex: 0 1 calc(100% - 220px);
+        @include gutter(2em);
+    }
+
+    @include screen('tablet') {
+        flex-flow: row wrap;
+
+        .Foto{
+            text-align: center;
+            img{ max-height: 240px; }
+        }
+        .Foto, .Experience{
+            flex-basis: 100%;
+            max-width: 100%;
+            @include gutter(0);
+        }
+    }
+}
+
+// RSS
+.rss{
+    ul.links{
+        a{
+            &:after{
+                content: '';
+                width: 22px;
+                height: 22px;
+                display: inline-block;
+                background: url(../images/basic/icon_rss.png) 50% 50% no-repeat;
+                background-size: contain;
+                vertical-align: sub;
+                margin-left: 4px;
+            }
+        }
+    }
+}
+
+// dl、dt、dd
+dl{
+    dt{
+        color: #000;
+        background: #d0d0d0;
+        display: inline-block;
+        padding: 0 1em;
+        border-radius: 4px;
+    }
+    dd{
+        padding: 1em 0;
+    }
+}
+
+
+
+

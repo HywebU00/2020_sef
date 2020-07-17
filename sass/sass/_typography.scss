@@ -18,7 +18,7 @@ $grid-background-baseline-color: rgba(187, 187, 187, 0.4);
 // +padding-leader() = 設定padding-top
 // +trailer() = 設定margin-bottom
 // +padding-trailer() = 設定padding-bottom
-.cp {
+.cp, .np, .sp {
     @include adjust-font-size-to($base-font-size*1, 2); //預設cp的文字設定(有可能上搞資料未包標籤)
     h1 {
         @include adjust-font-size-to($base-font-size*2, 3);
@@ -26,18 +26,21 @@ $grid-background-baseline-color: rgba(187, 187, 187, 0.4);
         @include trailer(.5);
     }
     h2 {
-        @include adjust-font-size-to($base-font-size*1.5, 2);
-        @include padding-leader(0);
+        @include adjust-font-size-to($base-font-size*1.75, 2);
+        // @include padding-leader(0);
+        @include leader(0);
         @include trailer(0);
     }
     h3 {
-        @include adjust-font-size-to($base-font-size*1.25, 2);
-        @include padding-leader(0);
+        @include adjust-font-size-to($base-font-size*1.5, 2);
+        // @include padding-leader(0);
+        @include leader(0);
         @include trailer(0);
     }
     h4 {
         @include adjust-font-size-to($base-font-size*1.25, 2);
-        @include padding-leader(0);
+        // @include padding-leader(0);
+        @include leader(0);
         @include trailer(0);
     }
     h5 {
@@ -51,7 +54,7 @@ $grid-background-baseline-color: rgba(187, 187, 187, 0.4);
         @include trailer(0);
     }
     p {
-        @include adjust-font-size-to($base-font-size*1, 2);
+        @include adjust-font-size-to($base-font-size*1, 1.8);
         @include leader(0);
         @include trailer(2);
     }

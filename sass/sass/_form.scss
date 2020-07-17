@@ -23,9 +23,9 @@ select::-ms-expand {
     margin: .5em;
     border-top: 1px solid #DDD;
     .form_grp {
-        border-bottom: 1px dashed #DDD;
+        border-bottom: 1px solid #efefef;
         overflow: hidden;
-        padding: .2em 0;
+        padding: .5em 0;
         // 閱讀條文
         &.agree {
             border-bottom: none;
@@ -344,10 +344,10 @@ input[type="button"],
     @extend %btn;
     @include btn_setting($form-focus, #FFF);
 }
-input[type="submit"] {
-    @extend %btn;
-    @include btn_setting($form-focus, #FFF);
-}
+// input[type="submit"] {
+//     @extend %btn;
+//     @include btn_setting($form-focus, #FFF);
+// }
 textarea {
     @include formStyle();
     height: 5em;

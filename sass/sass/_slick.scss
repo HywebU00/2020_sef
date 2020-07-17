@@ -15,6 +15,8 @@
     }
 }
 // arrow
+.slick-prev{ left: 12px; }
+.slick-next{ right: 12px; }
 .slick-prev, .slick-next {
     transition: .3s ease-out;
     &:hover, &:focus {
@@ -50,20 +52,47 @@
     }
 }
 
+// 月刊輪播
+.bookSlider {
+    width: 100%;
+    // padding-bottom: 3em;
+    @include gutter(0);
+    .img-container {
+        @include aspect-ratio(5, 2); //PC版比例
+        @include screen('mobile') {
+            @include aspect-ratio(5, 3); //Mobile版比例
+        }
+    }
+    .slick-prev {
+        @include screen('mobile') {
+            top: 35%;
+            left: 2%;
+        }
+    }
+    .slick-next {
+        @include screen('mobile') {
+            top: 35%;
+            right: 2%;
+        }
+    }
+}
+
 // slick._scss
 // adSlider
 .adSlider {
     @include gutter(70px);
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
     @include screen('mobile') {
         @include gutter();
+        .slick-prev { left: 10px; }
+        .slick-next { right: 10px; }
     }
     .slick-prev {
-        left: -15px;
+        left: 0px;
         top:50%;
     }
     .slick-next {
-        right: -15px;
+        right: 0px;
         top:50%;
     }
     .img-container {
@@ -120,7 +149,7 @@
         margin: 0.5em 0px 1.2em;
         border-bottom: 1px solid $primaryColor;
     }
-    background: #fff;
+    // background: #fff;
     padding: 1em 0;
     clear: both;
     .cp_slider {

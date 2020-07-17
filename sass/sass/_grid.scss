@@ -33,8 +33,46 @@
         max-width: 100% !important;
     }
 }
+
+// tab + 服務電話
+.news{
+    .tabSet {
+        @include make-xs-column(12);
+        @include make-sm-column(12);
+        @include make-md-column(8);
+        @include make-lg-column(8);
+    }
+    .contact {
+        @include make-xs-column(12);
+        @include make-sm-column(12);
+        @include make-md-column(4);
+        @include make-lg-column(4);
+    }
+}
+
+.propaganda{
+    .video {
+        @include make-xs-column(12);
+        @include make-sm-column(4);
+        @include make-md-column(4);
+        @include make-lg-column(4);
+    }
+    .publications {
+        @include make-xs-column(12);
+        @include make-sm-column(8);
+        @include make-md-column(8);
+        @include make-lg-column(8);
+    }
+}
+
+
 // 單欄
 .col-12 {}
+.hero{
+    .container {}
+    .mpSlider{}
+}
+
 // 兩欄 6-6
 .col-6-6 {
     .col {
@@ -78,20 +116,20 @@
     }
 }
 // 雙欄 4-8
-.col-4-8 {
-    .col {
-        @include make-xs-column(12);
-        @include make-sm-column(4);
-        @include make-md-column(4);
-        @include make-lg-column(4);
-    }
-    .col:nth-child(2n) {
-        @include make-xs-column(12);
-        @include make-sm-column(8);
-        @include make-md-column(8);
-        @include make-lg-column(8);
-    }
-}
+// .col-4-8 {
+//     .col {
+//         @include make-xs-column(12);
+//         @include make-sm-column(4);
+//         @include make-md-column(4);
+//         @include make-lg-column(4);
+//     }
+//     .col:nth-child(2n) {
+//         @include make-xs-column(12);
+//         @include make-sm-column(8);
+//         @include make-md-column(8);
+//         @include make-lg-column(8);
+//     }
+// }
 // 六欄 2-2-2-2-2-2
 .col-2-2-2-2-2-2 {
     .col {
