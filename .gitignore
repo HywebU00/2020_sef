@@ -14,6 +14,7 @@
 *.sass.map
 *.scss.map
 *.rb
+*.htm
 # Used by dotenv library to load environment variables.
 # .env
 
