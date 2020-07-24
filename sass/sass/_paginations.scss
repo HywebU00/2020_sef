@@ -40,8 +40,8 @@
             &.active {
                 a {
                     color: #fff !important;
-                    background: $form-focus;
-                    border: darken($form-focus, 5) solid 1px;
+                    background: $lightColor;
+                    border: darken($lightColor, 5) solid 1px;
                 }
             }
             %arrow {

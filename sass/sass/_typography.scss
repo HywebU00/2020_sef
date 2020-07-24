@@ -18,7 +18,7 @@ $grid-background-baseline-color: rgba(187, 187, 187, 0.4);
 // +padding-leader() = 設定padding-top
 // +trailer() = 設定margin-bottom
 // +padding-trailer() = 設定padding-bottom
-.cp, .np, .sp {
+.cp, .np, .sp, .lp {
     @include adjust-font-size-to($base-font-size*1, 2); //預設cp的文字設定(有可能上搞資料未包標籤)
     h1 {
         @include adjust-font-size-to($base-font-size*2, 3);

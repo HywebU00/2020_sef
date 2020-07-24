@@ -79,82 +79,70 @@ body{ position: relative; }
     &.NP3{
         .innerpage{
             .bg-box-L{
-                // position: fixed;
-                background: url(../images/bg-side_NP3.png) 50% 50% no-repeat;
-                // width: 763px;
-                // height: 475px;
-                // z-index: -1;
-                // top:10%;
-                // left: -20%;
+                background: url(../images/bg-side_NP2.png) 50% 50% no-repeat;
             }
             .bg-box-R{
-                // position: fixed;
-                background: url(../images/bg-side_NP3.png) 50% 50% no-repeat;
-                // width: 763px;
-                // height: 475px;
-                // z-index: -1;
-                // top:30%;
-                // right: -20%;
+                background: url(../images/bg-side_NP2.png) 50% 50% no-repeat;
             }
         }
     }
     &.NP4{
         .innerpage{
             .bg-box-L{
-                background: url(../images/bg-side_NP4.png) 50% 50% no-repeat;
+                background: url(../images/bg-side_NP2.png) 50% 50% no-repeat;
             }
             .bg-box-R{
-                background: url(../images/bg-side_NP4.png) 50% 50% no-repeat;
+                background: url(../images/bg-side_NP2.png) 50% 50% no-repeat;
             }
         }
     }
     &.NP5{
         .innerpage{
             .bg-box-L{
-                background: url(../images/bg-side_NP5.png) 50% 50% no-repeat;
+                background: url(../images/bg-side_NP2.png) 50% 50% no-repeat;
             }
             .bg-box-R{
-                background: url(../images/bg-side_NP5.png) 50% 50% no-repeat;
+                background: url(../images/bg-side_NP2.png) 50% 50% no-repeat;
             }
         }
     }
     &.NP6{
         .innerpage{
             .bg-box-L{
-                background: url(../images/bg-side_NP6.png) 50% 50% no-repeat;
+                background: url(../images/bg-side_NP2.png) 50% 50% no-repeat;
             }
             .bg-box-R{
-                background: url(../images/bg-side_NP6.png) 50% 50% no-repeat;
+                background: url(../images/bg-side_NP2.png) 50% 50% no-repeat;
             }
         }
     }
     &.NP7{
         .innerpage{
             .bg-box-L{
-                background: url(../images/bg-side_NP7.png) 50% 50% no-repeat;
+                background: url(../images/bg-side_NP2.png) 50% 50% no-repeat;
             }
             .bg-box-R{
-                background: url(../images/bg-side_NP7.png) 50% 50% no-repeat;
+                background: url(../images/bg-side_NP2.png) 50% 50% no-repeat;
             }
         }
     }
     &.NP8{
         .innerpage{
             .bg-box-L{
-                background: url(../images/bg-side_NP8.png) 50% 50% no-repeat;
+                background: url(../images/bg-side_NP2.png) 50% 50% no-repeat;
             }
             .bg-box-R{
-                background: url(../images/bg-side_NP8.png) 50% 50% no-repeat;
+                background: url(../images/bg-side_NP2.png) 50% 50% no-repeat;
             }
         }
     }
     &.NP9{
         .innerpage{
             .bg-box-L{
-                background: url(../images/bg-side_NP9.png) 50% 50% no-repeat;
+                background: url(../images/bg-side_NP2.png) 50% 50% no-repeat;
             }
             .bg-box-R{
-                background: url(../images/bg-side_NP9.png) 50% 50% no-repeat;
+                background: url(../images/bg-side_NP2.png) 50% 50% no-repeat;
             }
         }
     }
@@ -237,19 +225,28 @@ body{ position: relative; }
         @include li-reset;
         li{
             margin-bottom: .45em;
-            a.question{
-                display: block;
-                background: $lightColor;
-                color: #fff;
-                padding: .75em 1.25em .75em 2.75em;
-                border-radius: 4px;
+            a.title{
+                // display: block;
+                // color: #fff;
+                // background: #627080;
+                padding: .75em 1.25em .75em 3.5em !important;
+                // border-radius: 4px;
                 time{
                     display: inline-block;
-                    padding: 0 .75em;
+                    padding: 0 .75em 0 .75em;
+                    margin-right: .75em;
+                    border-right: dotted 1px rgba(255,255,255,0.5);
                 }
                 &:before{
-                    content:'Q';
-                    margin-left: -1.5em;
+                    content: 'Q';
+                    margin-left: -2.4em;
+                    background: rgba(255,255,255,0.25);
+                    width: 26px;
+                    height: 26px;
+                    display: inline-block;
+                    text-align: center;
+                    border-radius: 50%;
+                    line-height: 26px;
                 }
 
                 &.active{

@@ -50,8 +50,10 @@ $(function() {
         _sidebarCtrl = $('.sidebarCtrl'),
         _overlay = $('.menu_overlay'),
         _topic = $('.topic'),
-        _topicMobile = $('.topic-mobile');
-    _mArea = $('.m_area');
+        _topicMobile = $('.topic-mobile'),
+        _logo = $('h1'),
+        _mArea = $('.m_area');
+
     _sidebarCtrl.append('<span></span><span></span><span></span>');
     var search_mode = false;
     // 打開選單 function
@@ -162,6 +164,7 @@ $(function() {
             /////////////// PC版設定 /////////////
             /*-----------------------------------*/
             hideSidebar();
+
             _body.removeClass('noscroll');
             _nav.prependTo('.header .container');
             // _search.appendTo('.header .container');
@@ -173,6 +176,8 @@ $(function() {
             _topicMobile.hide();
             search_mode = false;
             // $('.language').find('ul').hide();
+            _logo.prependTo('.header .container');     // h1位置重置，for 無障礙遊走順序
+            $('#aU').prependTo('.header .container');  // 定位點位置重置，for 無障礙遊走順序
             // 副選單滑出
             liHasChild.on({
                 mouseenter: function() {
@@ -231,7 +236,7 @@ $(function() {
         menuH = Math.floor(_menu.outerHeight(true));
         $(window).bind("load scroll resize", function(e) {
             ww = _window.outerWidth();
-            if (ww >= wwSmall && $(this).scrollTop() > stickyMenuTop) {
+            if (ww >= wwMedium && $(this).scrollTop() > stickyMenuTop) {
                 $('.header').addClass('fixed');
                 $('.menu').addClass('clear');
                 $('.society').css('opacity', 0);

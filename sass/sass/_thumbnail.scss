@@ -38,6 +38,10 @@
         }
 
         p{ margin-bottom: 0; }
+
+        &:hover, &:focus{
+            color: #555;
+        }
     }
     .img-container {
         @include aspect-ratio(4, 3);

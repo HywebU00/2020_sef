@@ -179,9 +179,9 @@
     }
     // dots
     .slick-dots {
-        bottom: -30px !important;
+        bottom: -65px !important;
         @include screen('mobile') {
-            bottom: -40px !important;
+            // bottom: -80px !important;
             padding: 0;
         }
         li {

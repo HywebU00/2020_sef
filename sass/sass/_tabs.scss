@@ -2,7 +2,7 @@
     max-width: 100%;
     margin: 1em auto;
     overflow: hidden;
-    background: #fff;
+    // background: #fff;
     @extend %clearfix;
     @include screen('mobile') {
         width: auto;
@@ -15,33 +15,50 @@
         &.active>a {
             background-color: $primaryColor;
             color: #FFF;
+
+            position: relative;
+
+            &:after{
+                content: '';
+                display: block;
+                width: 16px;
+                height: 16px;
+                background: $primaryColor;
+                position: absolute;
+                transform: rotate(45deg);
+                left: calc(50% - 8px);
+                z-index: 3;
+                bottom: -6px;
+            }
         }
         float: left;
         margin: 0;
         padding: 0;
-        font-size:1em;
+        font-size:1.25em;
         line-height: 1;
+
         @include screen('mobile') {
             float: none;
             &>a {
                 width: 100% !important;
-                border-bottom: 1px solid #888;
+                border-bottom: 1px solid #eee;
             }
-            &.active>a {
-                border-color: #bbb;
-            }
+            &.active>a { border-color: #888; }
         }
         &>a {
             display: block;
-            padding: 16px 0 14px;
+            padding: 1.25em 0;
             text-align: center;
-            background-color: #aaa;
-            color: #fff;
+            // background-color: #aaa;
+            // background: rgba(30,37,93,0.25);
+            background-color: rgba(234,234,234,0.75);
+            color: #222;
             font-weight: bold;
             text-decoration: none;
-            @include text-overflow;
+            // @include text-overflow;
             @include box-sizing;
-            &:hover {
+            &:hover, &:focus {
+                color: #fff;
                 background: $primaryColor;
             }
         }
@@ -61,10 +78,11 @@
     display: block;
 
     @include screen('mobile') {
-        background: #f3f3f3;
+        // background: #f3f3f3;
     }
 }
 .tabContent {
+    background: #fff;
     position: absolute;
     top: auto;
     left: 0;
@@ -72,27 +90,41 @@
     clear: both;
     padding: 30px 20px;
     display: none;
+
     @include screen('mobile') {
         position: static;
     }
     ul {
-        @include li-reset;
+        // @include li-reset;
     }
     li {
         // margin: 0 0 .9em 0;
-        margin: .65em 0;
-        padding: 0;
+        // margin: .65em 0;
+        // padding: 0;
+        padding: .5em 0;
         line-height: 1.6;
         border-bottom: 1px #CCC dashed;
+        &:last-child{
+            border-bottom: transparent;
+        }
         @include screen('mobile') {
-            @include text-overflow();
+            // @include text-overflow();
         }
         a {
-            @include aSetting_nocolor;
+            // @include aSetting_nocolor;
+            // display: inline-block;
+            // padding: .65em 0;
+            // color: #222;
+            text-decoration: none;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            color: #222;
         }
         time {
             display: inline-block;
-            margin: 0 0 0 1em;
+            // margin: 0 0 0 1em;
+            margin: 0 1em;
             font-size: .813em;
             color: #666;
         }

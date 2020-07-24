@@ -90,14 +90,17 @@
         }
     }
     h1 {
-        float: left;
+        // float: left;
         width: 300px;
         height: 75px;
         margin: 0;
         padding: 0;
         margin-left: 1em;
+        position: absolute;
+        top: 10px;
 
-        margin-top: -130px;
+        // margin-top: -130px;
+
         @include box-sizing;
         a {
             display: inline-block;
@@ -115,6 +118,7 @@
 
             margin-left: 0;
             margin-top: 0;
+            position: static;
             img {
                 width: auto;
                 height: auto;
@@ -405,7 +409,7 @@
         width: 100% !important;
         max-width: 100% !important;
         min-width: auto;
-        padding: 2em 0;
+        // padding: 2em 0;
         display: block;
         height: auto;
         position: fixed;
@@ -418,11 +422,12 @@
             font-size: 0em;
             line-height: 0;
         }
+        a.switch{ display: none; }
         .form_grp {
             width: 100%;
             height: auto;
             // padding: 0 0 0 5% !important;
-            padding: 2.2em 1.5em !important;
+            padding: 2.5em 1.5em !important;
             margin-top: 0;
             text-align: right;
             float: left;
@@ -488,9 +493,9 @@
     @include screen('tablet') {
         display: none;
 
-        a.switch{
-            display: none;
-        }
+        // a.switch{
+        //     display: none;
+        // }
         .form_grp{
             display: block;
             top: 0;

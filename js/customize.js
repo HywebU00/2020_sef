@@ -228,21 +228,71 @@ $(function() {
     //     $(this).next('.form_grp').stop(true,false).slideToggle(300);
     // });
 
-    // 搜尋
-    $('.search').on({
-        mouseenter: function() {
-            $(this).find('.form_grp').stop(true, false).fadeIn();
-        },
-        mouseleave: function() {
-            $(this).find('.form_grp').stop(true, false).fadeOut();
-        }
+    // 搜尋  ------------------------------------------------------------------------------------------
+
+    // $('.search').on({
+    //     mouseenter: function() {
+    //         $(this).find('.form_grp').stop(true, false).fadeIn();
+    //     },
+    //     mouseleave: function() {
+    //         $(this).find('.form_grp').stop(true, false).fadeOut();
+    //     }
+    // });
+
+    // 搜尋主按鈕 clicked，.form_grp可開啟關閉
+    $('.search .switch').on('click',function(){
+        $(this).next('.form_grp').stop(true, false).fadeToggle();
     });
-    $('.search .switch').focus(function(){
-        $(this).next('.form_grp').stop(true, false).fadeIn();
+
+    // .form_grp 內最後一個 input focusout 時，關閉 .form_grp
+    $('.search .form_grp').find('input:last-child').focusout(function(){
+        $('.search .form_grp').stop(true, false).fadeOut();
     });
-    $('.search .switch').next('.form_grp').focusout(function(){
-        $(this).stop(true, false).fadeOut();
-    });
+
+    // $(document).click(function(event){
+    //     // 設定目標區域
+    //     var _switch = $('.search .switch'),
+    //         _searchGrp = $('.search .form_grp');
+    //         _searchInput = $('.search .form_grp input');
+            
+    //     // 當 焦點 不在上述三個元件上的情況時，把 .form_grp 關掉
+    //     if(!_switch.is(event.target) && !_searchGrp.is(event.target) && !_searchInput.is(event.target)){              
+    //         $('.search .form_grp').fadeOut();     //淡出消失
+    //     }
+    // });
+
+    // var _window = $(window),
+    //     _ww = _window.outerWidth(),
+    //     _wwMedium = 992,
+    //     _switch = $('.search .switch'),
+    //     _searchGrp = $('.search .form_grp');
+    //     _searchInput = $('.search .form_grp input');
+
+    // function search_machine(){
+    //     if( _ww > _wwMedium ){
+    //         // 當 焦點 不在上述三個元件上的情況時，把 .form_grp 關掉
+    //         if(!_switch.is(event.target) && !_searchGrp.is(event.target) && !_searchInput.is(event.target)){              
+    //             $('.search .form_grp').fadeOut();//淡出消失
+    //         };
+    //     };
+    // }
+    // search_machine();
+
+    // $(document).ready(function(){
+    //     $(window).resize(function() {
+    //         var _window = $(window),
+    //             _ww = _window.outerWidth(),
+    //             _wwMedium = 992;
+
+    //             if( _ww > _wwMedium ){
+    //                 $('.search .switch').hide();
+    //                 $('.search .form_grp').show();
+    //             } 
+    //     });
+    // });
+
+    // 搜尋  ------------------------------------------------------------------------------------------ END
+
 
     // 條件查詢
     $('.Conditional_query > .switch').click(function(){

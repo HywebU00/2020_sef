@@ -339,10 +339,9 @@ input[type="tel"] {
     }
 }
 button,
-input[type="button"],
-    {
-    @extend %btn;
-    @include btn_setting($form-focus, #FFF);
+input[type="button"]{
+    // @extend %btn;
+    // @include btn_setting($form-focus, #FFF);
 }
 // input[type="submit"] {
 //     @extend %btn;

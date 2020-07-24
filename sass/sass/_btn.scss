@@ -96,6 +96,10 @@ $btn-radius:.2em;
 .btn-reset {
     @extend %btn;
     color:lighten($color-word,15);
+    @include btn_setting(rgba(108, 122, 137, 1), #FFF);
+    &:hover, &:focus {
+        background: darken(rgba(108, 122, 137, 1), 12); 
+    }
 }
 .btn-primary {
     @extend .btn-orange;
@@ -107,6 +111,31 @@ $btn-radius:.2em;
     @include btn_setting($primaryColor, #FFF);
     &:hover, &:focus {
         background: darken($primaryColor, 12); 
+    }
+}
+// rgba(58, 83, 155, 1)
+.btn-primary{
+    @extend %btn;
+    @include btn_setting(rgba(58, 83, 155, 1), #FFF);
+    &:hover, &:focus {
+        background: darken(rgba(58, 83, 155, 1), 6); 
+    }
+}
+// rgba(37, 116, 169, 1)
+// rgba(82, 179, 217, 1)
+.btn-secondary{
+    @extend %btn;
+    @include btn_setting(rgba(82, 179, 217, 1), #FFF);
+    &:hover, &:focus {
+        background: darken(rgba(82, 179, 217, 1), 5); 
+    }
+}
+// rgba(98, 112, 128, 1);
+.btn-normal{
+    @extend %btn;
+    @include btn_setting(rgba(98, 112, 128, 1), #FFF);
+    &:hover, &:focus {
+        background: darken(rgba(98, 112, 128, 1), 12); 
     }
 }
 
