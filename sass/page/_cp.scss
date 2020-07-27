@@ -78,6 +78,15 @@
     a {
         @include aSetting;
     }
+
+    // 新聞稿欄位
+    .Press_release{
+        p{
+            margin-top: .125em;
+            margin-bottom: .125em;
+            color: #676767;
+        }
+    }
 }
 // 文章標籤
 div.tag {
@@ -231,36 +240,39 @@ div.tag {
         
         a {
             // padding: .2em 0px .2em 65px;
-            padding: 0px;
-            position: relative;
-            height: auto;
-            line-height: 20px;
-            display: inline-block;
-            vertical-align: middle;
-            margin: 0px .2em;
-            min-width: 32px;
-            text-align: center;
-            text-indent: -9999px;
-            height: 34px;
+            // padding: 0px;
+            // position: relative;
+            // height: auto;
+            // line-height: 20px;
+            // display: inline-block;
+            // vertical-align: middle;
+            // margin: 0px .2em;
+            // min-width: 32px;
+            // text-align: center;
+            // text-indent: -9999px;
+            // height: 34px;
             @include text-overflow;
             @include box-sizing;
+
             margin-bottom: .1em;
+            display: block;
+
             @include screen('mobile') {
                 max-width: 2em;
                 margin: 0px auto .5em 0px;
             }
             &:hover, &:focus {
-                &:before {
-                    content: "";
-                    z-index: 99;
-                    position: absolute;
-                    border-radius: 4px;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    box-shadow: 0px 0px 0px 2px $aHover inset;
-                }
+                // &:before {
+                //     content: "";
+                //     z-index: 99;
+                //     position: absolute;
+                //     border-radius: 4px;
+                //     top: 0;
+                //     left: 0;
+                //     width: 100%;
+                //     height: 100%;
+                //     box-shadow: 0px 0px 0px 2px $aHover inset;
+                // }
             }
             // .kb {
             //     font-size: .75em;
@@ -268,129 +280,129 @@ div.tag {
             //     display: none;
             //     margin: 0px .5em;
             // }
-            &:after {
-                content: "";
-                background: url(../images/basic/icon_file.png) no-repeat center center;
-                background-size: contain;
-                width: 26px;
-                height: 28px;
-                position: absolute;
-                top: 3px;
-                left: 3px;
-                text-align: right;
-            }
+            // &:after {
+            //     content: "";
+            //     background: url(../images/basic/icon_file.png) no-repeat center center;
+            //     background-size: contain;
+            //     width: 26px;
+            //     height: 28px;
+            //     position: absolute;
+            //     top: 3px;
+            //     left: 3px;
+            //     text-align: right;
+            // }
             // word系列
-            &[href$="doc"] {
-                &:after {
-                    background: url(../images/basic/icon_doc.png) no-repeat center center;
-                    background-size: contain;
-                }
-            }
-            &[href$="docx"] {
-                &:after {
-                    background: url(../images/basic/icon_docx.png) no-repeat center center;
-                    background-size: contain;
-                }
-            }
-            &[href$="odt"] {
-                &:after {
-                    background: url(../images/basic/icon_odt.png) no-repeat center center;
-                    background-size: contain;
-                }
-            }
-            // excel系列
-            &[href$="xls"] {
-                &:after {
-                    background: url(../images/basic/icon_xls.png) no-repeat center center;
-                    background-size: contain;
-                }
-            }
-            &[href$="csv"] {
-                &:after {
-                    background: url(../images/basic/icon_csv.png) no-repeat center center;
-                    background-size: contain;
-                }
-            }
-            &[href$="ods"] {
-                &:after {
-                    background: url(../images/basic/icon_ods.png) no-repeat center center;
-                    background-size: contain;
-                }
-            }
-            &[href$="xlsx"] {
-                &:after {
-                    background: url(../images/basic/icon_xlsx.png) no-repeat center center;
-                    background-size: contain;
-                }
-            }
-            // pdf系列
-            &[href$="pdf"] {
-                &:after {
-                    background: url(../images/basic/icon_pdf.png) no-repeat center center;
-                    background-size: contain;
-                }
-            }
-            &[href$="ppt"] {
-                &:after {
-                    background: url(../images/basic/icon_ppt.png) no-repeat center center;
-                    background-size: contain;
-                }
-            }
-            &[href$="pptx"] {
-                &:after {
-                    background: url(../images/basic/icon_pptx.png) no-repeat center center;
-                    background-size: contain;
-                }
-            }
-            &[href$="odp"] {
-                &:after {
-                    background: url(../images/basic/icon_odp.png) no-repeat center center;
-                    background-size: contain;
-                }
-            }
-            // 其他格式
-            &[href$="zip"] {
-                &:after {
-                    background: url(../images/basic/icon_zip.png) no-repeat center center;
-                    background-size: contain;
-                }
-            }
-            &[href$="txt"] {
-                &:after {
-                    background: url(../images/basic/icon_txt.png) no-repeat center center;
-                    background-size: contain;
-                }
-            }
-            &[href$="mov"] {
-                &:after {
-                    background: url(../images/basic/icon_mov.png) no-repeat center center;
-                    background-size: contain;
-                }
-            }
-            &[href$="mp3"] {
-                &:after {
-                    background: url(../images/basic/icon_mp3.png) no-repeat center center;
-                    background-size: contain;
-                }
-            }
-            &[href$="jpg"] {
-                &:after {
-                    background: url(../images/basic/icon_jpg.png) no-repeat center center;
-                    background-size: contain;
-                }
-            }
-            &[href$="wmv"] {
-                &:after {
-                    background: url(../images/basic/icon_wmv.png) no-repeat center center;
-                    background-size: contain;
-                }
-            }
-            &[href$="mp4"] {
-                &:after {
-                    background: url(../images/basic/icon_mp4.png) no-repeat center center;
-                    background-size: contain;
-                }
-            }
+            // &[href$="doc"] {
+            //     &:after {
+            //         background: url(../images/basic/icon_doc.png) no-repeat center center;
+            //         background-size: contain;
+            //     }
+            // }
+            // &[href$="docx"] {
+            //     &:after {
+            //         background: url(../images/basic/icon_docx.png) no-repeat center center;
+            //         background-size: contain;
+            //     }
+            // }
+            // &[href$="odt"] {
+            //     &:after {
+            //         background: url(../images/basic/icon_odt.png) no-repeat center center;
+            //         background-size: contain;
+            //     }
+            // }
+            // // excel系列
+            // &[href$="xls"] {
+            //     &:after {
+            //         background: url(../images/basic/icon_xls.png) no-repeat center center;
+            //         background-size: contain;
+            //     }
+            // }
+            // &[href$="csv"] {
+            //     &:after {
+            //         background: url(../images/basic/icon_csv.png) no-repeat center center;
+            //         background-size: contain;
+            //     }
+            // }
+            // &[href$="ods"] {
+            //     &:after {
+            //         background: url(../images/basic/icon_ods.png) no-repeat center center;
+            //         background-size: contain;
+            //     }
+            // }
+            // &[href$="xlsx"] {
+            //     &:after {
+            //         background: url(../images/basic/icon_xlsx.png) no-repeat center center;
+            //         background-size: contain;
+            //     }
+            // }
+            // // pdf系列
+            // &[href$="pdf"] {
+            //     &:after {
+            //         background: url(../images/basic/icon_pdf.png) no-repeat center center;
+            //         background-size: contain;
+            //     }
+            // }
+            // &[href$="ppt"] {
+            //     &:after {
+            //         background: url(../images/basic/icon_ppt.png) no-repeat center center;
+            //         background-size: contain;
+            //     }
+            // }
+            // &[href$="pptx"] {
+            //     &:after {
+            //         background: url(../images/basic/icon_pptx.png) no-repeat center center;
+            //         background-size: contain;
+            //     }
+            // }
+            // &[href$="odp"] {
+            //     &:after {
+            //         background: url(../images/basic/icon_odp.png) no-repeat center center;
+            //         background-size: contain;
+            //     }
+            // }
+            // // 其他格式
+            // &[href$="zip"] {
+            //     &:after {
+            //         background: url(../images/basic/icon_zip.png) no-repeat center center;
+            //         background-size: contain;
+            //     }
+            // }
+            // &[href$="txt"] {
+            //     &:after {
+            //         background: url(../images/basic/icon_txt.png) no-repeat center center;
+            //         background-size: contain;
+            //     }
+            // }
+            // &[href$="mov"] {
+            //     &:after {
+            //         background: url(../images/basic/icon_mov.png) no-repeat center center;
+            //         background-size: contain;
+            //     }
+            // }
+            // &[href$="mp3"] {
+            //     &:after {
+            //         background: url(../images/basic/icon_mp3.png) no-repeat center center;
+            //         background-size: contain;
+            //     }
+            // }
+            // &[href$="jpg"] {
+            //     &:after {
+            //         background: url(../images/basic/icon_jpg.png) no-repeat center center;
+            //         background-size: contain;
+            //     }
+            // }
+            // &[href$="wmv"] {
+            //     &:after {
+            //         background: url(../images/basic/icon_wmv.png) no-repeat center center;
+            //         background-size: contain;
+            //     }
+            // }
+            // &[href$="mp4"] {
+            //     &:after {
+            //         background: url(../images/basic/icon_mp4.png) no-repeat center center;
+            //         background-size: contain;
+            //     }
+            // }
         }
     }
 }
