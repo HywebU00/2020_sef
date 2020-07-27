@@ -166,6 +166,10 @@ div.tag {
             // counter-increment: counter;
             // content: counters(counter, ".") " . ";
             // display:none;
+
+            @include screen('tablet') {
+                top: 26px;
+            }
         }
 
         .block{
@@ -178,21 +182,50 @@ div.tag {
                 padding-left: 35px;
                 float: none;
                 margin-top: 5px;
-                @media screen and (max-width: 767px) {
+                // @include screen('mobile') {
+                //     display: inline-block;
+                //     float: none;
+                //     width: auto;
+                //     margin-top: 0;
+                // }
+                // @include screen('xs_mobile') {
+                //     display: none;
+                // }
+            }
+            .update {
+                width: 150px;
+                // @media screen and (max-width: 767px) {
+                //     margin-left: 5px;
+                // }
+            }
+            @include screen('tablet') {
+                display: block;
+                .kb,
+                .update,
+                .file_view {
+                    padding-left: 0;
+                    padding-right: 1em;
+                }
+            }
+
+            @include screen('mobile') {
+                display: block;
+                .kb,
+                .update,
+                .file_view {
                     display: inline-block;
                     float: none;
                     width: auto;
                     margin-top: 0;
                 }
-                @include screen('xs_mobile') {
-                    display: none;
-                }
-            }
-            .update {
-                width: 150px;
-                @media screen and (max-width: 767px) {
+                .update {
                     margin-left: 5px;
                 }
+            }
+            @include screen('xs_mobile') {
+                .kb,
+                .update,
+                .file_view { display: none; }
             }
         }
         
