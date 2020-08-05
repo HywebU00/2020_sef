@@ -461,7 +461,10 @@
                 display: block;
                 text-align: center;
                 picture{
-                    img{ margin: auto; }
+                    img{
+                        margin: auto;
+                        max-height: 232px;
+                    }
                 }
                 span.caption{
                     display: block;
@@ -507,6 +510,7 @@
                     picture{
                         img{
                             margin: auto;
+                            max-height: 232px;
                         }
                     }
                     span.caption{

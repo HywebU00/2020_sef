@@ -391,6 +391,7 @@
 }
 #A, #B, #C, #D, #E, #F, #G{
     margin: 2em 0;
+
     .block-title{ text-align: center; }
     .main-title{}
 
@@ -422,6 +423,7 @@ a.guide-link{
 
     .col{
         box-shadow: inset 0px 0px 0px 5px $primaryColor;
+        background: #fff;
 
         flex: 1 1 auto;
         flex-basis: calc(50% - 1em);
@@ -627,6 +629,13 @@ a.guide-link{
             }
         }
     }
+
+    @include screen('mobile') {
+        flex-flow: row wrap;
+        a{
+            flex-basis: calc(100% / 1);
+        }
+    }
 }
  
 // 文件流程
@@ -697,13 +706,14 @@ a.guide-link{
         }
 
         @include screen('mobile') {
+            flex-flow: row wrap;
             span.num{
                 flex: 0 0 120px;
+                margin-bottom: .5em;
             }
             section{
-                flex: 1 1 calc(100% - 120px);
+                flex: 1 1 100%;
             }
-
         }
     }
     .D{ border-bottom: transparent; }
@@ -713,6 +723,8 @@ a.guide-link{
 
 // 樣式1~2：標題＋內文 / 時間軸
 .longlist{
+    background: rgba(255,255,255,.9);
+    padding: 1em 1.5em;
     p{
         margin: .75em 0;
     }
@@ -1338,9 +1350,12 @@ a.guide-link{
         display: flex;
         flex-flow: row nowrap;
 
+        background: rgba(255,255,255,.75);
+
         .col{
             flex: 1 1 auto;
             ul{
+                margin-bottom: 0;
                 li{
                     a{
                         padding: .65em 1em;
@@ -1349,6 +1364,8 @@ a.guide-link{
                         text-overflow: ellipsis;
                         color: #555;
                         transition: ease .3s;
+                        display: block;
+                        border-bottom: dotted 1px #ddd;
                         &:hover, &:focus{
                             background: $secondaryColor;
                             color: #fff;
@@ -1356,6 +1373,10 @@ a.guide-link{
                                 background: #fff;
                             }
                         }
+                    }
+
+                    &:last-child{
+                        a{ border-bottom:transparent; }
                     }
                 }
             }
@@ -1377,6 +1398,10 @@ a.guide-link{
                 flex-flow: row wrap;
                 .col{ max-width: calc(100% / 1); }
             }
+        }
+
+        @include screen('tablet') {
+            background: none;
         }
     }
 
@@ -1505,6 +1530,7 @@ a.guide-link{
                 }
 
                 @include screen('mobile') {
+                    padding: 3em 1em 1em 1em;
                     li{
                         flex: 1 1 100%;
                         max-width: 100%;

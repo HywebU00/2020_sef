@@ -258,7 +258,7 @@ div.tag {
             display: block;
 
             @include screen('mobile') {
-                max-width: 2em;
+                // max-width: 2em;
                 margin: 0px auto .5em 0px;
             }
             &:hover, &:focus {

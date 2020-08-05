@@ -37,7 +37,10 @@
             }
         }
 
-        p{ margin-bottom: 0; }
+        p{
+            margin-bottom: 0;
+            word-break: break-all;  // 強制連續網址斷行
+        }
 
         &:hover, &:focus{
             color: #555;
