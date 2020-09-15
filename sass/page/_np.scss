@@ -238,6 +238,22 @@
                 margin-right: 2px;
                 border-radius: 3px;
             }
+
+            // &:nth-child(1){
+            //     a{ background: lighten($primaryColor, 8); }
+            // }
+            // &:nth-child(2){
+            //     a{ background: lighten($primaryColor, 6); }
+            // }
+            // &:nth-child(3){
+            //     a{ background: lighten($primaryColor, 4); }
+            // }
+            // &:nth-child(4){
+            //     a{ background: lighten($primaryColor, 2); }
+            // }
+            // &:nth-child(5){
+            //     a{ background: $primaryColor; }
+            // }
         }
 
         @include screen('tablet') {
@@ -968,7 +984,7 @@ a.guide-link{
                 border-bottom: 0;
 
                 .num{
-                    width: 1.5em;
+                    width: 2.5em;
                     text-align: right;
                     position: absolute;
                     left: 16px;
@@ -982,7 +998,7 @@ a.guide-link{
                     background: #627080;
                     color: #fff; 
                     // padding: .5em 1em .5em 3em;
-                    padding: .75em 1.25em .75em 3em;
+                    padding: .75em 1.25em .75em 4em;
                     border-radius: 4px;
 
                     &.active{
@@ -1340,6 +1356,12 @@ a.guide-link{
     a{
         display: block;
         border-bottom: dotted 1px #ddd;
+
+        time{ margin-right: .75em; font-weight: bold; font-size: .813em;}
+
+        @include screen('tablet') {
+            time{ display: block; }
+        }
     }
     
     .Flex{
@@ -1350,12 +1372,20 @@ a.guide-link{
         display: flex;
         flex-flow: row nowrap;
 
-        background: rgba(255,255,255,.75);
+        // background: rgba(255,255,255,.75);
 
         .col{
             flex: 1 1 auto;
+            margin: 0 1em;
+            max-width: calc(100% - 2em);
+
             ul{
                 margin-bottom: 0;
+                background: rgba(255,255,255,.75);
+                padding-top: 1.5em;
+                padding-bottom: 1.5em;
+                padding-right: 2em;
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
                 li{
                     a{
                         padding: .65em 1em;
@@ -1379,6 +1409,8 @@ a.guide-link{
                         a{ border-bottom:transparent; }
                     }
                 }
+
+                +.btn_grp{ margin-top: -2.4em; }
             }
 
             @include screen('tablet') {
@@ -1387,12 +1419,16 @@ a.guide-link{
                     padding-top: 1.5em;
                     padding-bottom: 1.5em;
                     border: solid 1px #ddd;
+
+                    li{
+                        a{ white-space: initial; }
+                    }
                 }
             }
         }
 
         &.two{
-            .col{ max-width: calc(100% / 2); }
+            .col{ max-width: calc(100% / 2 - 2em); }
 
             @include screen('tablet') {
                 flex-flow: row wrap;
@@ -1411,6 +1447,7 @@ a.guide-link{
                 &.Float-left{
                     line-height: 1.6em;
                     @include li-reset;
+                    padding: 1.25em 2em;
                 }
             }
 
@@ -1578,8 +1615,13 @@ a.guide-link{
                 z-index: 1;
                 width: calc( 100% - 1px);
                 height: 0;
-                background:  rgba(102, 189, 0, .9);
-                
+                // background:  rgba(226,138,0,.9);
+                // background: rgba(226,65,0,.9);
+                background: rgba(226,138,0,.9);
+                // @include gradient(rgba(184,142,77,.9), rgba(132,89,34,.9), horizontal);
+
+                // rgba(184,142,77,.9),rgba(132,89,34,.9));
+
                 // 上右下左
                 // clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
                 transform: skew(0,0);
@@ -1600,7 +1642,7 @@ a.guide-link{
                     display: inline-block;
                     width: 42px;
                     height: 42px;
-                    background: rgba(102,189,0,0.9);
+                    background: #b88e4d;
                     position: relative;
                     font-size: 0;
                     left: 42px;
@@ -1614,7 +1656,6 @@ a.guide-link{
 
                         position: absolute;
                     }
-
                     &:before{
                         width: 22px;
                         height: 2px;
@@ -1634,13 +1675,11 @@ a.guide-link{
                     margin-left: 2.8em;
                     color: #fff;
                 }
-
                 span.counter{
                     padding-left: 1.75em;
                     background: url(../images/icon/icon_view_white.svg) left 50% no-repeat;
                     background-size: 24px;
                 }
-
                 span.play{
                     // box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,1);
                     background: rgba(0,0,0,.6);
@@ -1663,14 +1702,13 @@ a.guide-link{
                         margin-left: .5em;
                     }
                 }
-
                 h3{
                     padding: 1em 2em 0;
                     margin: 1.25em 0 .75em;
                     font-size: 1.35em;
                     line-height: 1.4;
                     color: #fff;
-                    text-shadow: 0 0 2px rgba(58, 103, 6, 0.9);
+                    text-shadow: 0 0 2px rgba(158, 108, 30, 1);
 
                     &:before{
                         content:"";
@@ -1687,9 +1725,7 @@ a.guide-link{
                 &:hover, &:focus{
                     span.cube{
                         background: #fff;
-                        &:before, &:after{
-                            background: rgba(102, 189, 0, .9);
-                        }
+                        &:before, &:after{ background: #845922; }
                     }
                     span.play{ opacity: 1; }
 
@@ -1704,7 +1740,7 @@ a.guide-link{
                     }
                 }
                 &:focus{
-                    box-shadow: inset 0px 0px 0px 5px rgba(102, 189, 0, .75);
+                    box-shadow: inset 0px 0px 0px 5px rgba(226,138,0,.9);
                 }
             }
 
@@ -1739,9 +1775,6 @@ a.guide-link{
             }
         }
     }
-    .special_video{
-        .box{}
-    }
     @include screen('tablet') {
         .special, .special_video{
             .box{
@@ -1772,6 +1805,9 @@ a.guide-link{
                         width: calc(100% - 42px);
                         padding: .5em 1.75em 0;
                         float: left;
+                        overflow:hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
                     }
 
                     &:hover, &:focus{
@@ -1801,30 +1837,49 @@ a.guide-link{
                         width: 42px;
                         height: 42px;
                         border-radius: 0;
+                        border-radius: 3px;
 
-                        background: rgba(102, 189, 0, .9);
+                        background: #b88e4d;
                         transition: background .4s ease;
 
                         position: absolute;
                         right: 1px;
                         top: 76px;
 
+                        &:before, &:after{
+                            content:"";
+                            display: block;
+                            background: #fff;
+
+                            position: absolute;
+                        }
+
+                        &:before{
+                            width: 22px;
+                            height: 2px;
+                            left: calc(50% - 11px);
+                            top: calc(50% - 1px);
+                        }
                         &:after{
-                            width: 42px;
-                            height: 42px;
-                            background: url(../images/icon/icon-play-whtie.svg) 50% 50% no-repeat;
+                            width: 2px;
+                            height: 22px;
+                            margin-top: 0;
+                            margin-left: 0;
+                            left: calc(50% - 1px);
+                            top: calc(50% - 11px);
                         }
                     }
                     h3{
                         padding: 1em 3.2em 0 2em;
+                        overflow:hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
                     }
 
                     &:hover, &:focus{
                         span.play{
                             background: #fff;
-                            &:after{
-                                background: url(../images/icon/icon-play-green.svg) 50% 50% no-repeat;
-                            }
+                            &:before, &:after{ background: #845922; }
                         }
                         h3{
                             &:before{

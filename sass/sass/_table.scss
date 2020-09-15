@@ -13,8 +13,12 @@ table {
     td {
         border: #ddd 1px solid;
         word-break: break-all;
-        a {
-            word-break: break-all;
+        a { word-break: break-all; }
+
+        p, ul, ol{
+            margin-top: 10px !important;
+            margin-bottom: 10px !important;
+            line-height: 1.6;
         }
     }
     th {
@@ -23,6 +27,7 @@ table {
         border: #DDD 1px solid;
         text-align: center;
         white-space: nowrap;
+        min-width: 60px; 
     }
     &.table_hover {
         tr:hover {

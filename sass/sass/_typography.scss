@@ -56,13 +56,13 @@ $grid-background-baseline-color: rgba(187, 187, 187, 0.4);
     p {
         @include adjust-font-size-to($base-font-size*1, 1.8);
         @include leader(0);
-        @include trailer(2);
+        @include trailer(.9);
     }
     ul,
     ol {
         @include adjust-font-size-to($base-font-size*1, 2);
         @include leader(0);
-        @include trailer(2);
+        @include trailer(1);
     }
     dd,
     th,

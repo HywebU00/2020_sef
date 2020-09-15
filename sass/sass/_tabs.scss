@@ -47,7 +47,7 @@
         }
         &>a {
             display: block;
-            padding: 1.25em 0;
+            padding: .9em 0;
             text-align: center;
             // background-color: #aaa;
             // background: rgba(30,37,93,0.25);
@@ -101,9 +101,9 @@
         // margin: 0 0 .9em 0;
         // margin: .65em 0;
         // padding: 0;
-        padding: .5em 0;
+        padding: .15em 0;
         line-height: 1.6;
-        border-bottom: 1px #CCC dashed;
+        // border-bottom: 1px #CCC dashed;
         &:last-child{
             border-bottom: transparent;
         }
@@ -115,35 +115,63 @@
             // display: inline-block;
             // padding: .65em 0;
             // color: #222;
-            text-decoration: none;
-            overflow: hidden;
+
+            // text-decoration: none;
+            // overflow: hidden;
+            // white-space: nowrap;
+            // text-overflow: ellipsis;
+            // color: $aColor;
+
+            padding: .65em 1em;
+            overflow:hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
-            color: #222;
-        }
-        time {
-            display: inline-block;
-            // margin: 0 0 0 1em;
-            margin: 0 1em;
-            font-size: .813em;
-            color: #666;
+            color: #555;
+            transition: all ease .3s;
+            display: block;
+            border-bottom: dotted 1px #ddd;
+
+            time {
+                display: inline-block;
+                // margin: 0 0 0 1em;
+                margin: 0 1em;
+                font-size: .813em;
+                color: #666;
+                transition: all ease .3s;
+                margin-right: .75em;
+                font-weight: bold;
+            }
+
+            &:hover, &:focus{
+                background: $secondaryColor;
+                color: #fff;
+                time { color: #fff; } 
+                &:before{
+                    background: #fff;
+                }
+            }
+
+            @include screen('tablet') {
+                white-space: initial;
+                time{ display: block; margin: .15em 0; }
+
+            }
         }
 
         li{
             &:last-child{ border-bottom: 0; }
 
-            li{
-                border-bottom: 0;
-            }
+            li{ border-bottom: 0; }
         }
     }
 
     ol{
         ol{
             list-style-type:cjk-ideographic;
+            margin-bottom: 0;
             ol{
                 list-style-type:lower-latin;
-                margin: 1.25em 0;
+                margin: .25em 0;
             }
         }
     }

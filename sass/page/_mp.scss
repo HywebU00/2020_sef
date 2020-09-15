@@ -160,7 +160,7 @@
     // tab
     .tabSet{
         margin: 1.25em auto;
-        padding: 2em 0;
+        padding: 1.5em 0;
         background: #fff;
 
         overflow: visible;
@@ -200,6 +200,7 @@
         }
     }
     .tabContent {
+        padding: 10px 20px;
         li {
             a{
                 display: block;
@@ -208,13 +209,18 @@
                 overflow: hidden;
                 white-space: nowrap;
                 text-overflow: ellipsis;
+                transition: all .6 ease;
 
                 time { margin: 0 1em; }
+
+                &:hover, &:focus{
+                    color: #fff;
+                }
             }
         }
         a.more{
             position: absolute;
-            bottom: -60px;
+            bottom: -50px;
             left: 50%;
             margin-left: -80px;
 

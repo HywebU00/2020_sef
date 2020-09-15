@@ -249,6 +249,16 @@ $(function() {
         $('.search .form_grp').stop(true, false).fadeOut();
     });
 
+    // 點空白處關閉
+    $(document).click(function(event){
+        var _swi = $('.search .switch'),
+            _con = $('.search .form_grp');
+        if(!_swi.is(event.target) && !_con.is(event.target) && _con.has(event.target).length === 0){
+            //$('.search .form_grp').slideUp('slow');                            //滑動消失
+            $('.search .form_grp').stop(true, false).fadeOut();        //淡出消失
+        }
+    });
+
     // $(document).click(function(event){
     //     // 設定目標區域
     //     var _switch = $('.search .switch'),
@@ -300,7 +310,7 @@ $(function() {
             if ($(this).is(':visible')) {
                 $(this).siblings('.btn').attr('value', '收合條件查詢');
             } else {
-                $(this).siblings('.btn').attr('value', '開啟條件查詢');
+                $(this).siblings('.btn').attr('value', '顯示條件查詢');
             }
         });
     });

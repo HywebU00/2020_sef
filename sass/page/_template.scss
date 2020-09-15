@@ -162,7 +162,8 @@ body{ position: relative; }
         padding-top: 55px;
     }
     h2 {
-        line-height: 1.25em;
+        // line-height: 1.25em;
+        line-height: 1.8;
     }
 }
 ////////////////////////////////////////////////////////////
@@ -277,6 +278,41 @@ body{ position: relative; }
         }
     }
 }
+
+// 全文檢索
+table.gsc-search-box td{ border: transparent; }
+.gsc-search-box-tools .gsc-search-box .gsc-input{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    // border: transparent;
+}
+.gsc-input-box{
+    height: 100% !important;
+}
+.gsib_a, .gsib_b{ background: #fff; }
+.gsc-search-button-v2{ margin-top: 0; }
+.gsc-search-button-v2 svg{ vertical-align: middle; }
+.gsc-selected-option{ min-width: 90px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
