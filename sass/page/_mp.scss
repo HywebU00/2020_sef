@@ -203,7 +203,8 @@
         padding: 10px 20px;
         li {
             a{
-                display: inline-block;
+                display: block;
+                display: -ms-inline-block;
                 vertical-align: middle;
                 color: #222;
                 text-decoration: none;
