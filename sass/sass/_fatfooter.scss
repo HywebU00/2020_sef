@@ -10,7 +10,14 @@
         nav {
             ul{
                 li{
-                    a{ color: #fff;}
+                    a{
+                        color: #fff;
+
+                        &:hover, &:focus{
+                            color: #fff;
+                            background: darken(#845922, 10);
+                        }
+                    }
                 }
             }
         }
@@ -85,15 +92,119 @@
             }
         }
     }
+    nav {
+        overflow: hidden;
+        display: block;
+        position: relative;
+        padding: 3em 0 0 0;
+        @include box-sizing;
+        @include screen('mobile') {
+            padding: 1em 0;
+        }
+        ul {
+            @include li-reset;
+            
+            li {
+                display: inline-block;
+                text-align: left;
+                vertical-align: top;
+                margin: 0 -5px 1em 0;
+                width: calc(100% / 5);
+                @include box-sizing;
+                @include screen('mobile') {
+                    display: block;
+                    margin:0 0 .4em
+                }
+                a {
+                    line-height: 1.5;
+                    display: block;
+                    font-weight: bold;
+                    padding: .5em .5em;
+                    @include box-sizing;
+                    &:hover{
+                        box-shadow: none;
+                    }
+                }
+                ul {
+                    margin-top: 5px;
+                    @include screen('mobile') {
+                        width: auto;
+                    }
+                    li {
+                        display: block;
+                        margin: 0;
+                        border: none;
+                        background: none;
+                        width: 100%;
+                        @include screen('mobile') {
+                            display:inline-block;
+                            width:auto;
+                        }
+                        a {
+                            display: block;
+                            @include aSetting_nocolor;
+                            font-weight: normal;
+                            text-align: left;
+                            // font-size: .938em;
+                            line-height: 1.5em;
+                            padding: .5em .2em;
+                            background: none;
+
+                            &:before{
+                                content: '';
+                                display: inline-block;
+                                vertical-align: middle;
+                                width: 10px;
+                                height: 2px;
+                                background: rgba(255,255,255,.5);
+                                margin-right: .5em;
+                            }
+                            @include screen('mobile') {
+                                padding:.3em .2em;
+                            }
+                        }
+                    }
+                    //第三層關閉
+                    ul {
+                        display: none;
+                    }
+                }
+            }
+
+            @include screen('mobile') {
+                width: 100%;
+                display: block;
+                margin: 0px auto;
+
+                li{ width: 100%; }
+            }
+        }
+    }
+
+
+    // flex 版本
     // nav {
     //     overflow: hidden;
     //     display: block;
     //     position: relative;
-    //     padding: 3em 0 0 2em;
+    //     padding: 3em 0 0 0;
     //     @include box-sizing;
     //     @include screen('mobile') {
     //         padding: 1em 0;
     //     }
+
+    //     >ul{
+    //         -webkit-box-sizing: border-box;
+    //         box-sizing: border-box;
+    //         display: -webkit-box;
+    //         display: -ms-flexbox;
+    //         display: flex;
+    //         flex-flow: row wrap;
+    //         >li{
+    //             flex: 1 1 0;
+    //         }
+    //     }
+
     //     ul {
     //         @include li-reset;
     //         @include screen('mobile') {
@@ -106,6 +217,7 @@
     //             text-align: left;
     //             vertical-align: top;
     //             margin: 0 -5px 1em 0;
+    //             font-size: 1.125em;
     //             @include box-sizing;
     //             @include screen('mobile') {
     //                 display: block;
@@ -132,6 +244,7 @@
     //                     border: none;
     //                     background: none;
     //                     width: 100%;
+    //                     font-size: .9em;
     //                     @include screen('mobile') {
     //                         display:inline-block;
     //                         width:auto;
@@ -141,10 +254,20 @@
     //                         @include aSetting_nocolor;
     //                         font-weight: normal;
     //                         text-align: left;
-    //                         font-size: .938em;
+    //                         // font-size: .938em;
     //                         line-height: 1.5em;
     //                         padding: .5em .2em;
     //                         background: none;
+
+    //                         &:before{
+    //                             content: '';
+    //                             display: inline-block;
+    //                             vertical-align: middle;
+    //                             width: 10px;
+    //                             height: 2px;
+    //                             background: white;
+    //                             margin-right: .5em;
+    //                         }
     //                         @include screen('mobile') {
     //                             padding:.3em .2em;
     //                         }
@@ -158,101 +281,4 @@
     //         }
     //     }
     // }
-
-
-    // flex 版本
-    nav {
-        overflow: hidden;
-        display: block;
-        position: relative;
-        padding: 3em 0 0 2em;
-        @include box-sizing;
-        @include screen('mobile') {
-            padding: 1em 0;
-        }
-
-        >ul{
-            display: flex;
-            flex-flow: row wrap;
-            >li{
-                flex: 1 1 0;
-            }
-        }
-
-        ul {
-            @include li-reset;
-            @include screen('mobile') {
-                width: 100%;
-                display: block;
-                margin: 0px auto;
-            }
-            li {
-                display: inline-block;
-                text-align: left;
-                vertical-align: top;
-                margin: 0 -5px 1em 0;
-                font-size: 1.125em;
-                @include box-sizing;
-                @include screen('mobile') {
-                    display: block;
-                    margin:0 0 .4em
-                }
-                a {
-                    line-height: 1.5;
-                    display: block;
-                    font-weight: bold;
-                    padding: .5em 0px;
-                    @include box-sizing;
-                    &:hover{
-                        box-shadow: none;
-                    }
-                }
-                ul {
-                    margin-top: 5px;
-                    @include screen('mobile') {
-                        width: auto;
-                    }
-                    li {
-                        display: block;
-                        margin: 0;
-                        border: none;
-                        background: none;
-                        width: 100%;
-                        font-size: .9em;
-                        @include screen('mobile') {
-                            display:inline-block;
-                            width:auto;
-                        }
-                        a {
-                            display: block;
-                            @include aSetting_nocolor;
-                            font-weight: normal;
-                            text-align: left;
-                            // font-size: .938em;
-                            line-height: 1.5em;
-                            padding: .5em .2em;
-                            background: none;
-
-                            &:before{
-                                content: '';
-                                display: inline-block;
-                                vertical-align: middle;
-                                width: 10px;
-                                height: 2px;
-                                background: white;
-                                margin-right: .5em;
-                            }
-                            @include screen('mobile') {
-                                padding:.3em .2em;
-                            }
-                        }
-                    }
-                    //第三層關閉
-                    ul {
-                        display: none;
-                    }
-                }
-            }
-        }
-    }
 }
