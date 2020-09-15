@@ -202,15 +202,14 @@
     .tabContent {
         padding: 10px 20px;
         li {
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-
             a{
                 display: inline-block;
                 vertical-align: middle;
                 color: #222;
                 text-decoration: none;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
                 transition: all .6s ease;
 
                 time { margin: 0 1em; }
