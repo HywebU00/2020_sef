@@ -1395,6 +1395,7 @@ a.guide-link{
                         color: #555;
                         transition: ease .3s;
                         display: block;
+                        display: -ms-inline-flexbox;
                         border-bottom: dotted 1px #ddd;
                         &:hover, &:focus{
                             background: $secondaryColor;

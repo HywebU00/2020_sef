@@ -165,7 +165,8 @@
     display: -o-flex;
     display: flex;
 
-    flex-flow: row wrap;
+    // flex-flow: row wrap;
+
     .cover{
         flex: 1 1 220px;
 
@@ -179,6 +180,7 @@
     }
     .chapter{
         flex: 1 1 calc(100% - 220px);
+        max-width: calc(100% - 220px);
         padding: 0 1em;
         ul{
             margin: 0;
@@ -203,6 +205,7 @@
     }
 
     @include screen('mobile') {
+        flex-flow: row wrap;
         .cover, .chapter{
             flex-basis: 100%;
         }

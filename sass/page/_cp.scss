@@ -540,7 +540,8 @@ div.tag {
         flex: 0 0 220px;
     }
     .Experience{
-        flex: 0 1 calc(100% - 220px);
+        flex: 0 1 auto;
+        flex-basis: calc(100% - 220px);
         @include gutter(2em);
     }
 
