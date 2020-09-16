@@ -103,7 +103,7 @@
         // padding: 0;
         padding: .15em 0;
         line-height: 1.6;
-        // border-bottom: 1px #CCC dashed;
+        border-bottom: 1px #CCC dashed;
         &:last-child{
             border-bottom: transparent;
         }
@@ -130,7 +130,7 @@
             transition: all ease .3s;
             display: block;
             display: -ms-inline-flexbox;
-            border-bottom: dotted 1px #ddd;
+            // border-bottom: dotted 1px #ddd;
 
             time {
                 display: inline-block;

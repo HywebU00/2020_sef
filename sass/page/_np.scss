@@ -1413,6 +1413,7 @@ a.guide-link{
                 padding-right: 2em;
                 box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
                 li{
+                    border-bottom: dotted 1px #ddd;
                     a{
                         padding: .65em 1em;
                         overflow:hidden;
@@ -1422,7 +1423,7 @@ a.guide-link{
                         transition: ease .3s;
                         display: block;
                         display: -ms-inline-flexbox;
-                        border-bottom: dotted 1px #ddd;
+                        
                         &:hover, &:focus{
                             background: $secondaryColor;
                             color: #fff;
