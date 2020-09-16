@@ -1402,6 +1402,7 @@ a.guide-link{
         .col{
             flex: 1 1 auto;
             margin: 0 1em;
+            flex-basis: calc(100% - 2em);
             max-width: calc(100% - 2em);
 
             ul{
