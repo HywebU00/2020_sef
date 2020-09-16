@@ -120,7 +120,7 @@ img {
     }
 
     @include screen('tablet') {
-        img { width: 100%; }
+        // img { width: 100%; }
     }
 }
 

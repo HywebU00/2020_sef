@@ -453,6 +453,7 @@ a.guide-link{
 
         flex: 1 1 auto;
         flex-basis: calc(50% - 1em);
+        max-width: calc(50% - 1em);
         margin: 0 .5em;
         padding: 3em 2em 1em;
 
@@ -484,6 +485,7 @@ a.guide-link{
     @include screen('tablet') {
         .col{
             flex-basis: calc(100% - 1em);
+            max-width: calc(100% - 1em);
             margin: 1.5em 0;
         }
     }
