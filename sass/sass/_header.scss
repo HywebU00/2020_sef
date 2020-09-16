@@ -140,13 +140,15 @@
         @extend %clearfix;
         // overflow: hidden;
         width: 100%;
-        margin-bottom: .5em;
+        // margin-bottom: .5em;
         box-sizing:border-box;
 
         // flex
         display: flex;
         flex-flow: row nowrap;
         justify-content: flex-end;
+
+        position: absolute;
 
         >ul{
             li{

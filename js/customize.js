@@ -250,14 +250,33 @@ $(function() {
     });
 
     // 點空白處關閉
-    $(document).click(function(event){
-        var _swi = $('.search .switch'),
-            _con = $('.search .form_grp');
-        if(!_swi.is(event.target) && !_con.is(event.target) && _con.has(event.target).length === 0){
-            //$('.search .form_grp').slideUp('slow');                            //滑動消失
-            $('.search .form_grp').stop(true, false).fadeOut();        //淡出消失
-        }
-    });
+    // var _window = $(window),
+    //     ww = _window.outerWidth(),
+    //     wh = _window.height(),
+    //     _body = $('body'),
+    //     wwNormal = 1400,
+    //     wwMedium = 992,
+    //     wwSmall = 768,
+    //     wwxs = 576;
+
+    // if ( ww >= wwSmall) {
+    //     $(document).click(function(event){
+    //         var _swi = $('.search .switch'),
+    //             _con = $('.search .form_grp');
+    //         if(!_swi.is(event.target) && !_con.is(event.target) && _con.has(event.target).length === 0){
+    //             //$('.search .form_grp').slideUp('slow');                            //滑動消失
+    //             $('.search .form_grp').stop(true, false).fadeOut();        //淡出消失
+    //         }
+    //     });
+    // }
+    // $(document).click(function(event){
+    //     var _swi = $('.search .switch'),
+    //         _con = $('.search .form_grp');
+    //     if(!_swi.is(event.target) && !_con.is(event.target) && _con.has(event.target).length === 0){
+    //         //$('.search .form_grp').slideUp('slow');                            //滑動消失
+    //         $('.search .form_grp').stop(true, false).fadeOut();        //淡出消失
+    //     }
+    // });
 
     // $(document).click(function(event){
     //     // 設定目標區域

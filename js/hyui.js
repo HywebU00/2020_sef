@@ -247,7 +247,7 @@ $(function() {
                 $('.header').addClass('fixed');
                 $('.menu').addClass('clear');
                 $('.society').css('opacity', 0);
-                $('.header').css('margin-top', menuH - hh + 42);
+                $('.header').css('margin-top', menuH - hh - 80);
                 $('.main').css('margin-top', hh);
             } else {
                 $('.header').removeClass('fixed');
