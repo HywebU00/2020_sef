@@ -182,16 +182,32 @@
     flex-flow: row wrap;
 
     h2.title,
-    article,
-    ul.tags,
-    .External-link{
+    article{
         flex: 1 1 50%;
-        align-self: center;
+        max-width: 50%;
 
         @include screen('tablet') {
             flex: 1 1 100%;
+            max-width: 100%;
         }
-        @include screen('mobile') {}
+    }
+
+    ul.tags{
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    h2.title,
+    article,
+    ul.tags,
+    .External-link{
+        // flex: 1 1 50%;
+        align-self: center;
+
+        // @include screen('tablet') {
+        //     flex: 1 1 100%;
+        // }
+        // @include screen('mobile') {}
     }
 
     // h2節點
@@ -1434,7 +1450,10 @@ a.guide-link{
 
             @include screen('tablet') {
                 flex-flow: row wrap;
-                .col{ max-width: calc(100% / 1); }
+                .col{
+                    max-width: calc(100% / 1);
+                    width: 100%;
+                }
             }
         }
 
