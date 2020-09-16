@@ -192,16 +192,14 @@
         }
     }
 
-    ul.tags{
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
+    // ul.tags{
+    //     flex: 1 1 100%;
+    //     max-width: 100%;
+    // }
 
-    h2.title,
-    article,
     ul.tags,
     .External-link{
-        // flex: 1 1 50%;
+        flex: 1 1 50%;
         align-self: center;
 
         // @include screen('tablet') {

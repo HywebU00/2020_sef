@@ -119,7 +119,7 @@ img {
         max-height: 100%;
     }
 
-    @include screen('mobile') {
+    @include screen('tablet') {
         img { width: 100%; }
     }
 }
