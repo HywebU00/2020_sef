@@ -1314,13 +1314,14 @@ a.guide-link{
             @include make-md-column(4);
             @include make-lg-column(4);
             background: #fff;
-            padding-right: 1.5em;
+            // padding-right: 1.5em;
         }
         .caption2{
             @include make-xs-column(12);
             @include make-sm-column(9);
             @include make-md-column(8);
             @include make-lg-column(8);
+            padding-left: 1.5em;
 
             .mask{
                 max-height: 250px;

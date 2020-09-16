@@ -208,6 +208,7 @@
         flex-flow: row wrap;
         .cover, .chapter{
             flex-basis: 100%;
+            max-width: 100%;
         }
         .chapter{
             margin: 1em 0;
