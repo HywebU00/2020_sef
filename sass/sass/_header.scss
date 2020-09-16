@@ -274,12 +274,13 @@
         // z-index: 1;
         display: block;
         width: 80px;
-        line-height: 80px;
+        height: 80px;
+        // line-height: 80px;
         color: #fff;
         text-align: center;
         font-size: 0;
 
-        background: url(../images/icon/icon_search_white.png) 50% 50% no-repeat;
+        background: url(../images/icon/icon_search_white.svg) 50% 50% no-repeat;
         background-size: 20px 20px;
         transition: background .3s ease-out;
 
