@@ -129,6 +129,7 @@
             color: #555;
             transition: all ease .3s;
             display: block;
+            display: -ms-inline-flexbox;
             border-bottom: dotted 1px #ddd;
 
             time {
