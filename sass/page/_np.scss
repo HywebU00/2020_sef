@@ -1027,6 +1027,10 @@ a.guide-link{
                     p{ margin-bottom: .75em; }
                     li{
                         margin: 0 0;
+                        a{
+                            display: inline;
+                            padding: 0 0;
+                        }
                     }
 
                     display: none;
@@ -1378,9 +1382,13 @@ a.guide-link{
 
 // 樣式10~12：塊狀連結
 .links{
+    li{
+        border-bottom: dotted 1px #ddd;
+        &:last-child{ border-bottom: dotted 1px transparent; }
+    }
     a{
         display: block;
-        border-bottom: dotted 1px #ddd;
+        // border-bottom: dotted 1px #ddd;
 
         time{ margin-right: .75em; font-weight: bold; font-size: .813em;}
 
@@ -1413,7 +1421,7 @@ a.guide-link{
                 padding-right: 2em;
                 box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
                 li{
-                    border-bottom: dotted 1px #ddd;
+                    // border-bottom: dotted 1px #ddd;
                     a{
                         padding: .65em 1em;
                         overflow:hidden;
@@ -1434,7 +1442,7 @@ a.guide-link{
                     }
 
                     &:last-child{
-                        a{ border-bottom:transparent; }
+                        border-bottom: transparent;
                     }
                 }
 
