@@ -101,7 +101,7 @@
         // margin: 0 0 .9em 0;
         // margin: .65em 0;
         // padding: 0;
-        padding: .15em 0;
+        padding: .65em 0;
         line-height: 1.6;
         border-bottom: 1px #CCC dashed;
         &:last-child{
@@ -110,6 +110,7 @@
         @include screen('mobile') {
             // @include text-overflow();
         }
+
         a {
             // @include aSetting_nocolor;
             // display: inline-block;
