@@ -149,7 +149,7 @@
             &:hover, &:focus{
                 background: $secondaryColor;
                 color: #fff;
-                time {} 
+                time { color: #fff; } 
                 &:before{
                     background: #fff;
                 }
@@ -158,7 +158,9 @@
             @include screen('tablet') {
                 white-space: initial;
                 time{ display: block; margin: .15em 0; }
-
+                &:hover, &:focus{
+                    time { color: #666; } 
+                }
             }
         }
 
