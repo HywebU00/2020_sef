@@ -149,7 +149,7 @@
             &:hover, &:focus{
                 background: $secondaryColor;
                 color: #fff;
-                time { color: #fff; } 
+                time {} 
                 &:before{
                     background: #fff;
                 }
