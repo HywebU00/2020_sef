@@ -96,6 +96,7 @@
     }
     ul {
         // @include li-reset;
+        overflow: hidden;
     }
     li {
         // margin: 0 0 .9em 0;
@@ -104,6 +105,7 @@
         padding: .65em 0;
         line-height: 1.6;
         border-bottom: 1px #CCC dashed;
+
         &:last-child{
             border-bottom: transparent;
         }
@@ -123,7 +125,7 @@
             // text-overflow: ellipsis;
             // color: $aColor;
 
-            // padding: .65em 1em;
+            
             overflow:hidden;
             white-space: nowrap;
             text-overflow: ellipsis;

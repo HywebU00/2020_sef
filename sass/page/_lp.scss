@@ -254,6 +254,7 @@
         margin-left: 2em;
         margin-bottom: 0;
         position: relative;
+        overflow: visible;
         @include screen('mobile') {
             margin-left: 1em;
             padding-left: 50px;
