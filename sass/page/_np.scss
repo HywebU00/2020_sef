@@ -500,7 +500,7 @@ a.guide-link{
             h4.main-title{
                 position: absolute;
                 z-index: 2;
-                top: 0;
+                top: -10px;
             }
         }
     }
@@ -513,12 +513,18 @@ a.guide-link{
 
     .Pic-link{
         .Issue{
-            
+            position: relative;
+            padding-top: 1.25em;
+            h4.main-title{
+                position: absolute;
+                z-index: 2;
+                top: -10px;
+            }
             .item{
 
                 a{
                     margin: 1em;
-                    padding: 1em;
+                    padding: 1.75em 1em 1em;
                     box-shadow: 0 0 1em 0em rgba(0,0,0,0.15);
                     border-radius: 4px;
                     background: #fff;
@@ -551,7 +557,7 @@ a.guide-link{
         a{
             max-width: 100%;
             margin: 1em;
-            padding: 1em;
+            padding: 1.75em 1em 1em;
             display: block;
             background: #fff;
             color: #222;
@@ -1027,10 +1033,14 @@ a.guide-link{
                     p{ margin-bottom: .75em; }
                     li{
                         margin: 0 0;
-                        a{
-                            display: inline;
-                            padding: 0 0;
-                        }
+                        // a{
+                        //     display: inline;
+                        //     padding: 0 0;
+                        // }
+                    }
+                    a{
+                        display: inline;
+                        padding: 0 .25em;
                     }
 
                     display: none;

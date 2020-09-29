@@ -35,6 +35,9 @@
                 padding: 1em 0;
                 border-bottom: 1px solid #DDD;
                 position: relative; // outline: 1px solid blue;
+
+                &:nth-child(even){ background: #f7f7f7; }
+
                 .tag {
                     margin-left: 2em;
                 }
@@ -301,6 +304,13 @@
                     display: block;
                     color: $lightColor;
                     padding: .5em 0;
+                    border-bottom: 2px solid transparent;
+                    transition: all .6s ease;
+
+                    &:hover, &:focus{
+                        background: none;
+                        border-bottom: 2px solid $lightColor;
+                    }
                 }
             }
             .text{

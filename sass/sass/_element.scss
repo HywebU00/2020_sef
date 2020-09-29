@@ -115,14 +115,15 @@ img.img-responsive {
 }
 // 表單必填
 .necessary {
-    color: #bf0000;
+    color: #fff;
     margin: 0px .2em;
-    background: #fff;
+    margin-right: .5em;
+    background: #b33c3c;
     padding: .25em .5em;
     font-size: .813em;
     font-weight: bold;
     border-radius: 4px;
-    box-shadow: inset 0px 0px 0px 1px #bf0000;
+    // box-shadow: inset 0px 0px 0px 1px #bf0000;
 }
 
 .tooltip {

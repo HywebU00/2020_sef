@@ -637,7 +637,7 @@ $(function() {
     // 無障礙錨點切換語系，更改accesskey的title名稱
     var weblang = $('html').attr('lang');
     if (weblang.substring(0, 2) == 'zh') {
-        $('header').find('.accesskey').attr('title', '上方功能區塊');
+        $('header').find('.accesskey').attr('title', '上方主導覽選單區塊');
         $('.main').find('.accesskey').attr('title', '中央內容區塊');
         $('footer').find('.accesskey').attr('title', '下方功能區塊');
         $('.search').find('.accesskey').attr('title', '關鍵字搜尋：文章關鍵字搜尋');

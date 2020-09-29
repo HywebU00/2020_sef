@@ -13,33 +13,66 @@
     section{
         padding: 1em 0;
     }
-    .pic {
-        float: left;
-        margin: 0px 1em 1em 0;
-        width: auto;
-        width: 45%;
-        max-width: 400px;
-        background: #F1F1F1;
-        overflow: hidden;
-        padding: .5em .5em .2em;
-        img {
-            float: none;
-            width: 100%;
-            margin: 0;
-            display:block;
-        }
-        span {
-            text-align: center;
-            display: block;
-            font-size: .938em;
-        }
-        @include screen('mobile') {
-            float: none;
-            max-width: 100%;
+    // .pic {
+    //     float: left;
+    //     margin: 0px 1em 1em 0;
+    //     width: auto;
+    //     width: 45%;
+    //     max-width: 400px;
+    //     background: #F1F1F1;
+    //     overflow: hidden;
+    //     padding: .5em .5em .2em;
+    //     img {
+    //         float: none;
+    //         width: 100%;
+    //         margin: 0;
+    //         display:block;
+    //     }
+    //     span {
+    //         text-align: center;
+    //         display: block;
+    //         font-size: .938em;
+    //     }
+    //     @include screen('mobile') {
+    //         float: none;
+    //         max-width: 100%;
+    //         width: auto;
+    //         margin: 0px auto;
+    //         display: block;
+    //         margin-bottom: .5em;
+    //     }
+    // }
+
+    .clear{
+        @include clearfix;
+        .pic {
+            float: left;
+            margin: 0px 1em 1em 0;
             width: auto;
-            margin: 0px auto;
-            display: block;
-            margin-bottom: .5em;
+            width: 45%;
+            max-width: 400px;
+            background: #F1F1F1;
+            overflow: hidden;
+            padding: .5em .5em .2em;
+            img {
+                float: none;
+                width: 100%;
+                margin: 0;
+                display:block;
+            }
+            span {
+                text-align: center;
+                display: block;
+                font-size: .938em;
+            }
+            @include screen('mobile') {
+                float: none;
+                max-width: 100%;
+                width: auto;
+                margin: 0px auto;
+                display: block;
+                margin-bottom: .5em;
+            }
         }
     }
 
@@ -148,8 +181,12 @@ div.tag {
         list-style-type: none;
         padding: 0;
         margin-left: 1em;
+        margin-right: 1em;
+        width: calc(100% - 2em);
         @media screen and (max-width: 767px) {
             margin-left: 0;
+            margin-right: 0;
+            width: 100%;
         }
     }
     li {
@@ -265,7 +302,8 @@ div.tag {
 
             @include screen('mobile') {
                 // max-width: 2em;
-                margin: 0px auto .5em 0px;
+                // margin: 0px auto .5em 0px;
+                margin: 0;
             }
             &:hover, &:focus {
                 // &:before {
@@ -428,15 +466,22 @@ div.tag {
         counter-reset: counter;
         list-style-type: none;
         padding: 0;
+        // margin-left: 1em;
         margin-left: 1em;
+        margin-right: 1em;
+        width: calc(100% - 2em);
         @media screen and (max-width: 767px) {
             margin-left: 0;
+            margin-right: 0;
+            width: 100%;
         }
     }
     li {
         position: relative;
         margin-bottom: 10px;
         border-bottom: 1px solid #EEE;
+        padding: .65em 0 .65em 0;
+
         a {
             padding: .2em 0px .2em 35px;
             position: relative;
@@ -465,7 +510,7 @@ div.tag {
     padding: 0.8em 1.5em 0.8em;
     background: #fff;
     @extend %clearfix;
-     @include box-sizing;
+    @include box-sizing;
     @include screen('mobile') {
         font-size: 0.938em;
     }
@@ -580,15 +625,47 @@ div.tag {
 
 // dl、dt、dd
 dl{
+    // dt, dd{ display: inline-block; }
     dt{
         color: #000;
         background: #d0d0d0;
-        display: inline-block;
         padding: 0 1em;
+        display: inline-block;
         border-radius: 4px;
     }
     dd{
         padding: 1em 0;
+        margin-left: 0;
+    }
+
+    section{
+        dt{
+            color: #000;
+            background: #d0d0d0;
+            // padding: 0 1em;
+            display: inline-block;
+            border-radius: 4px;
+            width: auto;
+        }
+        dd{
+            // padding: 1em 0;
+            width: calc(100% - 150px);
+            max-width: calc(100% - 150px);
+            margin-left: 0;
+            display: inline;
+        }
+        span{
+            flex-basis: calc(100% / 3);
+        }
+
+        @include screen('mobile') {
+            span{
+                flex-basis: 100%;
+                margin-bottom: 1em;
+
+                &:last-child{ margin-bottom: 0; }
+            }
+        }
     }
 }
 

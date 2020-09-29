@@ -22,7 +22,7 @@ $(function() {
         speed: 300,
         slidesToShow: 2,
         slidesToScroll: 1,
-        autoplay: true,
+        autoplay: false,
         arrow: true,
         lazyLoaded: true,
         lazyLoad: 'ondemand',
@@ -199,25 +199,38 @@ $(function() {
 
     // 偵測高度吐出來
     $(document).ready(function(){
-        _tabItem_HH = $('.tabItem').height();              //標屜高
-        _tabConten_HH = $('.accordion').height();          //內容高
-        _total_HH = _tabItem_HH + _tabConten_HH + 120;           //總高＝標屜高＋內容高
-        $(".tabItemH").find('span').text(_tabItem_HH);     //前台動態顯示
-        $(".contentH").find('span').text(_tabConten_HH);   //前台動態顯示
-        $('.totalH').find('span').text(_total_HH);         //前台動態顯示
-        $('.tabLink').css('height', _total_HH);            //把總高吐出來
-
-        $('.tabs2 .accordion a.title').click(function(){
-            _tabItem_HH = $('.tabItem').height();
-            _tabConten_HH = $('.accordion').height();
-            _total_HH = _tabItem_HH + _tabConten_HH + 120;
-
-            $(".tabItemH").find('span').text(_tabItem_HH);
-            $(".contentH").find('span').text(_tabConten_HH);
-            $('.totalH').find('span').text(_total_HH);
-
-            $('.tabLink').css('height', _total_HH);
-        })
+		// 用於海基會陸配關懷專區tab頁
+		
+		height(); // 啟動先呼叫確認高度
+     	     	
+		$('.tabs2').each(function() {
+			var _tabItem = $(this).find('.tabItem'),
+				_tabItemA = _tabItem.children('a');
+		       	_tabItemA.click(tabs2);
+			
+			// 切換頁籤			
+			function tabs2(e) {
+		    	var _tabItemNow = $(this).parent()
+		        	_tabItem.removeClass('active');
+		           	_tabItemNow.addClass('active');
+					height();
+			}
+		});
+     	
+     	// 標籤點擊算高度
+     	$('.tabs2 .accordion a.title').click(height);
+     	
+     	function height(){
+	        var _block_title_HH = $('h3.block-title').height(), 			//h3標題高
+        		_tabItem_HH = $('h2.active').height(),              			//標屜高
+        		_tabConten_HH = $('h2.active + div').height(),          //內容高
+        		_total_HH = _tabItem_HH + _tabConten_HH 
+        				+ _block_title_HH + 90; 											//總高＝標屜高＋內容高 + h3標題高 + 內距
+        		$(".tabItemH").find('span').text(_tabItem_HH);     		//前台動態顯示
+        		$(".contentH").find('span').text(_tabConten_HH);   	//前台動態顯示
+        		$('.totalH').find('span').text(_total_HH);         				//前台動態顯示
+        		$('.tabLink').css('height', _total_HH);            					//把總高吐出來
+     	}    
     });
 
     // parallax scrolling 視差滾動

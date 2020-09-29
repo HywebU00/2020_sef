@@ -1,5 +1,5 @@
 
-$form_title_width :150px;       // 表單title寬度
+$form_title_width :160px;       // 表單title寬度
 
 @mixin formStyle($f_color:$color-word, $f_border:$color-gray, $f_radius:$btn-radius) {
     color: $f_color;
@@ -42,6 +42,8 @@ select::-ms-expand {
         width: $form_title_width;
         @include gutter();
         padding-top: 5px;
+        font-weight: 500;
+        color: #3c3c3c;
         @include screen('mobile') {
             width: 100%;
         }
