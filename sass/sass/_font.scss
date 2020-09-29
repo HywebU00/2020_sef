@@ -7,6 +7,8 @@
 @mixin aSetting($COLOR:$aColor, $NOLINE:none) {
     color: $COLOR;
     text-decoration: $NOLINE;
+    display: inline;
+    padding: 0 .25em;  
     &:hover,
     &:focus {
         color: $aHover;

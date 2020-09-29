@@ -55,8 +55,8 @@ $grid-background-baseline-color: rgba(187, 187, 187, 0.4);
     }
     p {
         @include adjust-font-size-to($base-font-size*1, 1.8);
-        @include leader(0);
-        @include trailer(.9);
+        @include leader(.6);
+        @include trailer(.6);
     }
     ul,
     ol {

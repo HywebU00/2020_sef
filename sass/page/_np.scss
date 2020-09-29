@@ -1581,10 +1581,13 @@ a.guide-link{
                 li{
                     flex: 1 1 50%;
                     max-width: 50%;
+                    &:last-child, &:nth-last-child(2){
+                        border-bottom: dotted 1px transparent;
+                    }
                     a{
                         border-bottom: 0;
                         color: #222;
-                        padding: .35em 0 .35em 1.5em;
+                        padding: .5em 0 .5em 1.5em;
                         line-height: 1.6;
 
                         position: relative;

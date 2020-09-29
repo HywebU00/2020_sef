@@ -105,6 +105,9 @@
         // padding: .65em 0;
         line-height: 1.6;
         border-bottom: 1px #CCC dashed;
+        // margin-bottom: .65em;
+        padding-top: .65em;
+        padding-bottom: .65em;
 
         &:last-child{
             border-bottom: transparent;
@@ -132,8 +135,10 @@
             padding: .65em 0;
             // color: #555;
             transition: all ease .3s;
-            display: block;
+            // display: block;
+            display: inline;
             display: -ms-inline-flexbox;
+            padding: 0 .25em;
             // border-bottom: dotted 1px #ddd;
 
             time {
@@ -148,8 +153,8 @@
             }
 
             &:hover, &:focus{
-                background: $secondaryColor;
-                color: #fff;
+                // background: $secondaryColor;
+                // color: #fff;
                 time { color: #fff; } 
                 &:before{
                     background: #fff;
@@ -166,9 +171,14 @@
         }
 
         li{
-            &:last-child{ border-bottom: 0; }
+            &:last-child{
+                border-bottom: 0;
+            }
 
-            li{ border-bottom: 0; }
+            li{
+                border-bottom: 0;
+                padding: .25em 0;
+            }
         }
     }
 
