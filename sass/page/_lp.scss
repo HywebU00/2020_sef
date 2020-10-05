@@ -264,6 +264,9 @@
         }
         >li{
             margin-bottom: 1.5em;
+
+            &:hover, &:focus{ background: transparent; }
+
             &:first-child{
                 position: absolute;
                 left: -28px;

@@ -211,12 +211,13 @@
                 overflow: hidden;
                 white-space: nowrap;
                 text-overflow: ellipsis;
-                transition: all .6s ease;
+                // color: $primaryColor;
+                transition: all .3s ease;
 
                 time { margin: 0 1em; }
 
                 &:hover, &:focus{
-                    color: #fff;
+                    color: lighten($primaryColor, 10);
                 }
             }
         }

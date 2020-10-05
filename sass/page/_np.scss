@@ -1037,6 +1037,11 @@ a.guide-link{
                         //     display: inline;
                         //     padding: 0 0;
                         // }
+
+                        &:hover, &:focus{
+                            background: none;
+                            a{ color: lighten($primaryColor, 10); }
+                        }
                     }
                     a{
                         display: inline;
