@@ -1,0 +1,22 @@
+.history_block,
+.history_search{
+	ul.year{
+		>li{
+			&:first-child{
+				font-size: 1.2em;
+			    line-height: 1.9;
+			    letter-spacing: 0;
+			}
+
+			.title{
+				letter-spacing: normal;
+				font-size: 1.35em;
+			}
+		}
+	}
+}
+
+
+.cascading {
+	li{ width: calc(100% / 3); }
+}

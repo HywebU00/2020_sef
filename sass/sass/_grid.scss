@@ -35,20 +35,20 @@
 }
 
 // tab + 服務電話
-.news{
-    .tabSet {
-        @include make-xs-column(12);
-        @include make-sm-column(12);
-        @include make-md-column(8);
-        @include make-lg-column(8);
-    }
-    .contact {
-        @include make-xs-column(12);
-        @include make-sm-column(12);
-        @include make-md-column(4);
-        @include make-lg-column(4);
-    }
-}
+// .news{
+//     .tabSet {
+//         @include make-xs-column(12);
+//         @include make-sm-column(12);
+//         @include make-md-column(8);
+//         @include make-lg-column(8);
+//     }
+//     .contact {
+//         @include make-xs-column(12);
+//         @include make-sm-column(12);
+//         @include make-md-column(4);
+//         @include make-lg-column(4);
+//     }
+// }
 
 .propaganda{
     .video {

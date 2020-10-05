@@ -157,6 +157,33 @@
         padding: 0 1em !important;
     }
 
+    .container{
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+
+        flex-flow: row nowrap;
+        align-items: center;
+
+        .tabSet{
+            flex: 1 1 auto;
+            flex-basis: 80%;
+        }
+        .contact{
+            flex: 1 1 auto;
+            flex-basis: 40%;
+        }
+
+        @include screen('tablet') {
+            flex-flow: row wrap;
+            .tabSet, .contact{
+                flex-basis: 100%;
+            }
+        }
+    }
+
     // tab
     .tabSet{
         margin: 1.25em auto;
@@ -313,7 +340,7 @@
                 .caption{
                     position: absolute;
                     bottom: 0;
-                    right: 0;
+                    right: 4px;
                     line-height: 50px;
                     background: $lightColor;
                     color: #fff;
