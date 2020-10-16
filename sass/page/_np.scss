@@ -546,13 +546,15 @@ a.guide-link{
         }
     }
 
+    // 控制ie圖片跑版
     .bookSlider, .Pic-link{
         .img-container{
-            // 控制ie圖片跑版
-            img{
-                width: auto !important;
-                height: auto !important;
-            }
+            img{ width: auto !important; }
+        }
+    }
+    .Pic-link{
+        .img-container{
+            img{ height: auto !important; }
         }
     }
 }
