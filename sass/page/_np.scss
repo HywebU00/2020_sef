@@ -1483,6 +1483,7 @@ a.guide-link{
                         transition: ease .3s;
                         display: block;
                         display: -ms-inline-flexbox;
+                        width: 100%;
                         
                         &:hover, &:focus{
                             background: $secondaryColor;
