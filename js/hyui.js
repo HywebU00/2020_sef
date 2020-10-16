@@ -301,9 +301,11 @@ $(function() {
             if ($(this).is(':visible')) {
                 $('.btn-fatfooter').html("收合/CLOSE");
                 $('.btn-fatfooter').attr('name', '收合選單/CLOSE');
+            	$('.btn-fatfooter').attr('title', '收合選單');
             } else {
                 $('.btn-fatfooter').html("展開/OPEN");
                 $('.btn-fatfooter').attr('name', '展開選單/OPEN');
+                $('.btn-fatfooter').attr('title', '展開選單');
             }
         });
         $(this).stop(true, true).toggleClass('close');

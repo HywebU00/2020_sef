@@ -341,8 +341,10 @@ $(function() {
         $(this).next('.form_grid').stop(true, false).slideToggle(function(){
             if ($(this).is(':visible')) {
                 $(this).siblings('.btn').attr('value', '收合條件查詢');
+                $(this).siblings('.btn').attr('title', '收合條件查詢');
             } else {
                 $(this).siblings('.btn').attr('value', '顯示條件查詢');
+                $(this).siblings('.btn').attr('title', '開啟條件查詢');
             }
         });
     });

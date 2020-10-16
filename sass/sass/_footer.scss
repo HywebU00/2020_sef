@@ -10,6 +10,12 @@ footer {
         // >div {
         //     padding-bottom: 1em;
         // }
+        .accesskey{
+            &:hover, &:focus{
+                border: solid 1px #fff;
+            }
+        }
+
         section{
             display: flex;
             flex-flow: row wrap;
