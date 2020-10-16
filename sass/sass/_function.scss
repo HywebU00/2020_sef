@@ -79,7 +79,9 @@ div.function {
             &:hover,
             &:focus {
                 &:before {
-                    filter: invert(100%);
+                    // filter: invert(100%);
+                    background: url(../images/basic/icon_share_w.png) no-repeat center center  !important;
+                    background-size: 24px !important;
                 }
             }
         }
@@ -110,9 +112,9 @@ div.function {
                     &:focus {
                         background: $aHover;
                         color: #FFF;
-                        &:before {
-                            filter: invert(100%);
-                        }
+                        // &:before {
+                        //     filter: invert(100%);
+                        // }
                     }
                     &:before {
                         content: "";
@@ -128,11 +130,26 @@ div.function {
                         background: url(../images/basic/icon_back.png) no-repeat center center;
                         background-size: 100%;
                     }
+                    &:hover,
+                    &:focus {
+                        a:before {
+                            background: url(../images/basic/icon_back_w.png) no-repeat center center;
+                            background-size: 100%;
+                        }
+                    }
                 }
                 &.print {
                     a:before {
                         background: url(../images/basic/icon_printer.png) no-repeat center center;
                         background-size: 100%;
+                    }
+
+                    &:hover,
+                    &:focus {
+                        a:before {
+                            background: url(../images/basic/icon_printer_w.png) no-repeat center center;
+                            background-size: 100%;
+                        }
                     }
                     @include screen('mobile') {
                         display: none;
@@ -142,6 +159,13 @@ div.function {
                     a:before {
                         background: url(../images/basic/icon_forward.png) no-repeat center center;
                         background-size: 100%;
+                    }
+                    &:hover,
+                    &:focus {
+                        a:before {
+                            background: url(../images/basic/icon_forward_w.png) no-repeat center center;
+                            background-size: 100%;
+                        }
                     }
                 }
             }
