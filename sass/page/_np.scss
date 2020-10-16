@@ -545,6 +545,13 @@ a.guide-link{
             }
         }
     }
+
+    .bookSlider, .Pic-link{
+        .img-container{
+            // 控制ie圖片跑版
+            img{ width: auto !important; }
+        }
+    }
 }
 .bookSlider{
     .slick-prev{ left: 0; top: 45%; }
