@@ -247,8 +247,7 @@ $(function() {
                 $('.header').addClass('fixed');
                 $('.menu').addClass('clear');
                 $('.society').css('opacity', 0);
-                // $('.header').css('margin-top', menuH - hh - 90);
-                $('.header').css('margin-top', -90);
+                $('.header').css('margin-top', menuH - hh - 90);
                 $('.main').css('margin-top', hh);
             } else {
                 $('.header').removeClass('fixed');
@@ -302,11 +301,11 @@ $(function() {
             if ($(this).is(':visible')) {
                 $('.btn-fatfooter').html("收合/CLOSE");
                 $('.btn-fatfooter').attr('name', '收合選單/CLOSE');
-            	$('.btn-fatfooter').attr('title', '收合選單');
+                $('.btn-fatfooter').attr('title', 'Close');
             } else {
                 $('.btn-fatfooter').html("展開/OPEN");
                 $('.btn-fatfooter').attr('name', '展開選單/OPEN');
-                $('.btn-fatfooter').attr('title', '展開選單');
+                $('.btn-fatfooter').attr('title', 'Open');
             }
         });
         $(this).stop(true, true).toggleClass('close');
@@ -552,7 +551,7 @@ $(function() {
     //////////分享按鈕 share dropdwon////////
     /*------------------------------------*/
     $('.function_panel .share').children('ul').hide();
-    $('.function_panel .share').prepend('<a href="#" class="shareButton">share分享按鈕</a>');
+    $('.function_panel .share').prepend('<a href="#" class="shareButton" title="share">shareButton</a>');
     var _shareButton = $('.shareButton');
     _shareButton.off().click(function(e) {
         $(this).siblings('ul').stop(true, true).slideToggle();
