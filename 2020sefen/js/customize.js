@@ -337,15 +337,15 @@ $(function() {
 
 
     // 條件查詢
-//     $('.Conditional_query > .switch').click(function(){
-//         $(this).next('.form_grid').stop(true, false).slideToggle(function(){
+    $('.Conditional_query > .switch').click(function(){
+        $(this).next('.form_grid').stop(true, false).slideToggle(function(){
 //             if ($(this).is(':visible')) {
 //                $(this).siblings('.btn').attr('value', '收合條件查詢');
 //             } else {
 //                $(this).siblings('.btn').attr('value', '顯示條件查詢');
 //             }
-//         });
-//     });
+        });
+    });
 
     // 開合選單
     // $('.elastic-box .btn').click(function(e){
