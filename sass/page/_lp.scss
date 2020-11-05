@@ -36,7 +36,7 @@
                 border-bottom: 1px solid #DDD;
                 position: relative; // outline: 1px solid blue;
 
-                &:nth-child(even){ background: #f7f7f7; }
+                &:nth-child(even){ background: #fbfbfb; }
 
                 .tag {
                     margin-left: 2em;
@@ -49,6 +49,7 @@
                     color: $color-word;
                     &:hover {
                         color: $aHover;
+                        b{ background: #845922;}
                     }
                     .num {
                         width: 2em;
@@ -62,10 +63,10 @@
                         }
                     }
                     b{
-                        background: #845922;
+                        background: #555;
                         color: #fff;
                         margin-right: .5em;
-                        padding: .1em .75em;
+                        padding: 0 .75em;
                         font-weight: normal;
                         display: inline-block;
                         border-radius: 4px;

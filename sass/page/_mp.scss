@@ -243,18 +243,20 @@
 
                 time { margin: 0 1em; }
                 b{
-                    background: #845922;
-                    color: #fff;
+                    background: #f2f3f2;
+                    color: #222;
                     margin-right: .5em;
                     padding: .1em .75em;
                     font-weight: normal;
                     display: inline-block;
                     border-radius: 4px;
                     font-size: .9em;
+                    transition: all .3s ease;
                 }
 
                 &:hover, &:focus{
-                    color: lighten($primaryColor, 10);
+                    color: lighten($primaryColor, 5);
+                    b{ background: #845922; color: #fff; }
                 }
             }
         }
