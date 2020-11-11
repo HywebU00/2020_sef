@@ -252,6 +252,11 @@
                     border-radius: 4px;
                     font-size: .9em;
                     transition: all .3s ease;
+
+                    &.R{ background: #B1484C; color: #fff; }
+                    &.G{ background: #298c44; color: #fff; }
+                    &.B{ background: #2b3b8f; color: #fff; }
+                    &.Y{ background: #ffc107 }
                 }
 
                 &:hover, &:focus{
