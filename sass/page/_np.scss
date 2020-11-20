@@ -683,19 +683,25 @@ a.guide-link{
 
         &.A{
             span{
-                background: url(../images/basic/icon-link-A.png) 50% 50% no-repeat,  #7f5825;
+                background: url(../images/basic/icon-link-A.png) 50% 50% no-repeat,  #71245f;
                 background-size: 100px;
             }
         }
         &.B{
             span{
-                background: url(../images/basic/icon-link-B.png) 50% 50% no-repeat,  #54324c;
+                background: url(../images/basic/icon-link-B.png) 50% 50% no-repeat,  #432956;
                 background-size: 100px;
             }
         }
         &.C{
             span{
                 background: url(../images/basic/icon-link-C.png) 50% 50% no-repeat,  #191c5a;
+                background-size: 100px;
+            }
+        }
+        &.D{
+            span{
+                background: url(../images/basic/icon-link-D.svg) 50% 50% no-repeat,  #7f5825;
                 background-size: 100px;
             }
         }
