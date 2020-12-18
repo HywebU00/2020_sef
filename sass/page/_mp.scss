@@ -292,7 +292,36 @@
             border-bottom: solid 2px #fff;
             padding: 1em 0;
 
-            h4{ color: #fff; }
+            h4{
+                color: #fff;
+                a{
+                    color: #fff;
+
+                    &:after{
+                        content: '';
+                        display: inline-block;
+                        width: 16px;
+                        height: 16px;
+                        background: url(../images/icon/icon_link.svg) 42% 50% no-repeat;
+                        filter: invert(1);
+                        background-size: 60%;
+                        vertical-align: middle;
+                        margin-left: -18px;
+                        border: 1px solid #000;
+                        border-radius: 50%;
+
+                        opacity: 0;
+                        transition: all .6s ease;
+                    }
+
+                    &:hover, &:focus{
+                        &:after{
+                            opacity: 1;
+                            margin-left: 8px;
+                        }
+                    }
+                }
+            }
             
             position: relative;
             &:after{

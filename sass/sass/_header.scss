@@ -203,7 +203,7 @@
         .mix{
             overflow: visible;
             section{
-                width: 240px;
+                // width: 240px;
                 height: 80px;
                 @include gradient(#b88e4d, #845922, horizontal);
                 color: #fff;
@@ -211,6 +211,7 @@
                 // flex
                 display: flex;
                 flex-flow: row nowrap;
+                justify-content: center;
 
                 position: relative;
 
