@@ -300,12 +300,12 @@
                     &:after{
                         content: '';
                         display: inline-block;
-                        width: 16px;
-                        height: 16px;
+                        width: 20px;
+                        height: 20px;
                         background: url(../images/icon/icon_link.svg) 42% 50% no-repeat;
                         filter: invert(1);
                         background-size: 60%;
-                        vertical-align: middle;
+                        vertical-align: top;
                         margin-left: -18px;
                         border: 1px solid #000;
                         border-radius: 50%;
